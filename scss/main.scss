@@ -14,11 +14,12 @@ body {
   html {
     margin: 0;
     padding: 0;
+    color: $navigation-background;
   }
 
   .header {
     background-color: $navigation-background;
-    height: 80px;
+    height: 5.5rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -31,9 +32,9 @@ body {
       flex-direction: column;
     }
     &__nav-logo {
-      width: 100%;
-      height: 16vw;
-      margin: 0 0 8px 0;
+      width: 24px;
+      height: 12vw;
+      margin: 0 0 0 0;
       display: flex;
       align-items: center;
       align-items: flex-end;
@@ -42,11 +43,13 @@ body {
     }
     &__nav-logo-image {
       width: 45vw;
+      height: auto;
+      box-sizing: border-box;
     }
     &__nav-options {
       width: 100%;
-      height: 20px;
-      margin: 8px 0 0 0;
+      height: 30px;
+      margin: 8px 8px 0 0;
       padding: 0 0 0 0;
       display: flex;
       justify-content: space-between;
@@ -54,38 +57,42 @@ body {
     }
     &__nav-list {
       box-sizing: border-box;
+      height: auto;
     }
     &__nav-list--left {
       width: 50%;
-      padding: 0 0 27px 0;
+      padding: 0 0 0 0;
       display: flex;
       justify-content: space-evenly;
       box-sizing: border-box;
     }
     &__nav-list--left:hover {
-      border-bottom: 4px solid $text-color;
+      border-bottom: 5px solid $text-color;
     }
     &__nav-list--right {
       width: 50%;
-      padding: 0 0 27px 0;
+      padding: 0 0 0 0;
       display: flex;
       justify-content: space-evenly;
       box-sizing: border-box;
     }
 
     &__nav-list--right:hover {
-      border-bottom: 4px solid $text-color;
+      border-bottom: 5px solid $text-color;
     }
 
     &__nav-list-links {
       text-decoration: none;
       list-style: none;
+      line-height: 5px;
       color: $text-color;
+      box-sizing: border-box;
     }
   }
   .hero {
     width: 100%;
     display: flex;
+    align-items: center;
     &__image {
       background-image: url(/Assets/Images/yvette-unsplash.jpg);
       height: 183px;
@@ -96,17 +103,23 @@ body {
     &__title {
       position: absolute;
       color: $text-color;
+      font-size: 1.5rem;
+      width: 65%;
+      line-height: 2rem;
+      margin: 0 0 0 16px;
     }
   }
   .title {
     margin: auto;
     width: 99%;
-    height: 56px;
+    height: auto;
     display: flex;
-    justify-content: center;
+    color: $navigation-background;
+    // justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: bold;
+    margin: 32px 16px 24px 16px;
   }
 
   .main {
@@ -147,6 +160,7 @@ body {
     }
     &__content {
       font-size: 13px;
+      text-align: left;
     }
 
     &__content--top {
