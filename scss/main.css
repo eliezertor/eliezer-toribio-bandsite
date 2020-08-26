@@ -204,18 +204,18 @@ body {
   }
   .main__band-name {
     font-weight: 600;
-    margin: 0 0 24px 0;
+    margin: 0 0 24px 16px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .main__content {
+    font-size: 13px;
   }
   .main__content--top {
     margin: 0 16px 24px 16px;
   }
   .main__content--bottom {
-    margin: 0 16px 72px 16px;
-  }
-  .photo-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0 16px 0 16px;
+    margin: 0 16px 40px 16px;
   }
   .gallery {
     display: -webkit-box;
@@ -230,6 +230,15 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    background-color: #fafafa;
+  }
+  .gallery__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 32px 0 0 16px;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
   }
   .gallery__img {
     margin: 8px 0 8px 0;
@@ -288,26 +297,77 @@ body {
     width: 288px;
     height: 50vw;
     background-size: cover;
-    margin: 8px 0 24px 0;
+    margin: 8px 0 40px 0;
   }
   .footer {
     width: 100%;
     height: 100%;
     background-color: #323232;
     color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 16px;
+    font-size: 13px;
+  }
+  .footer__touch {
+    margin: 40px 0 24px 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 0;
   }
   .footer__social {
     width: 50px;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 0 7px;
   }
   .footer__social-link--insta {
     background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
   }
   .footer__social-link--face {
-    background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
+    background-image: url(../Assets/Icons/SVG/Icon-facebook.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
   }
   .footer__social-link--twitter {
-    background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
+    background-image: url(../Assets/Icons/SVG/Icon-twitter.svg);
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+  }
+  .footer__management {
+    font-weight: 600;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  .footer__management-company {
+    width: 100%;
+    margin: 0 0 24px 0;
+    padding: 0;
+  }
+  .footer__address {
+    width: 50%;
+    margin: 0 0 24px 0;
+  }
+  .footer__email {
+    margin: 0 0 40px 0;
+  }
+  .footer__copy-right {
+    margin: 0 0 40px 0;
+    width: 75%;
   }
 }
-/*# sourceMappingURL=main.css.map */*/
+/*# sourceMappingURL=main.css.map */
