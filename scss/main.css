@@ -340,6 +340,7 @@ html {
             flex-direction: row;
     -ms-flex-flow: wrap;
         flex-flow: wrap;
+    margin: 0 0 48px 0;
   }
 }
 
@@ -490,8 +491,20 @@ html {
 
 @media screen and (min-width: 768px) {
   .gallery__title {
-    display: inline-block;
     width: 100%;
+    height: 152px;
+    font-size: 2.4rem;
+    margin: 0 0 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -656,12 +669,32 @@ html {
   font-size: 13px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    height: 650px;
+  }
+}
+
 .footer__touch {
   margin: 40px 0 24px 0;
   font-size: 2rem;
   letter-spacing: 2px;
   padding: 0;
   width: 90%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__touch {
+    width: 30%;
+    height: 10%;
+  }
 }
 
 .footer__social {
@@ -675,11 +708,30 @@ html {
           justify-content: space-evenly;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__social {
+    margin: 40px 0 0 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 30%;
+    height: 15%;
+    margin: 0 0 0 5%;
+  }
+}
+
 .footer__social-link--insta {
   background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social-link--insta {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 .footer__social-link--face {
@@ -689,11 +741,70 @@ html {
   background-repeat: no-repeat;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__social-link--face {
+    width: 25px;
+    height: 25px;
+  }
+}
+
 .footer__social-link--twitter {
   background-image: url(../Assets/Icons/SVG/Icon-twitter.svg);
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social-link--twitter {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+.footer__social-logo {
+  width: 20%;
+  height: 50px;
+}
+
+@media screen and (min-width: 320px) {
+  .footer__social-logo {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social-logo {
+    display: contents;
+  }
+}
+
+.footer__social-logo--image {
+  width: 50px;
+  height: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__social-logo--image {
+    width: 15%;
+    height: 18%;
+    margin: 0 0 0 14%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .test1,
+  .footer .test2,
+  .footer .test3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 30%;
+    height: 15%;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
 }
 
 .footer__management {
@@ -704,10 +815,28 @@ html {
   font-size: 14px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__management {
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
 .footer__management-company {
   width: 90%;
   margin: 0 0 24px 0;
   padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__management-company {
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    display: inline-block;
+  }
 }
 
 .footer__address {
@@ -715,13 +844,40 @@ html {
   margin: 0 0 24px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__address {
+    width: 100%;
+    height: 10%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
 .footer__email {
   width: 60%;
   margin: 0 0 40px 0;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__email {
+    width: 20%;
+    height: 10%;
+    margin: 0;
+    display: inline-block;
+  }
+}
+
 .footer__copy-right {
   margin: 0 0 40px 0;
   width: 75%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__copy-right {
+    width: 20%;
+    height: 10%;
+    margin: 0;
+    display: inline-block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

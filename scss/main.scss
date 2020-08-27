@@ -203,6 +203,7 @@ html {
   @include tablet {
     flex-direction: row;
     flex-flow: wrap;
+    margin: 0 0 48px 0;
   }
 
   &__img {
@@ -292,17 +293,25 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    // height: 150%;
+    // margin: 56px 0 0 0;
+    // padding: 56px 0 0 0;
   }
 
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 32px 0 0 16px;
-    // justify-content: left;
     align-self: end;
     @include tablet {
-      display: inline-block;
       width: 100%;
+      height: 152px;
+      font-size: 2.4rem;
+      margin: 0 0 0 0;
+      display: flex;
+      align-content: center;
+      align-self: center;
+      align-items: center;
     }
   }
   &__img {
@@ -424,65 +433,152 @@ html {
   flex-direction: column;
   padding: 0 0 0 16px;
   font-size: 13px;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 650px;
+  }
+
   &__touch {
     margin: 40px 0 24px 0;
     font-size: 2rem;
     letter-spacing: 2px;
     padding: 0;
     width: 90%;
+    @include tablet {
+      width: 30%;
+      height: 10%;
+    }
   }
   &__social {
     width: 50%;
     height: 10%;
     display: flex;
     justify-content: space-evenly;
-    // margin: 0 0 0 7px;
+    @include tablet {
+      margin: 40px 0 0 0;
+      align-items: center;
+      width: 30%;
+      height: 15%;
+      margin: 0 0 0 5%;
+    }
   }
   &__social-link--insta {
     background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
   }
   &__social-link--face {
     background-image: url(../Assets/Icons/SVG/Icon-facebook.svg);
     width: 50px;
     height: 50px;
-
     background-repeat: no-repeat;
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
   }
   &__social-link--twitter {
     background-image: url(../Assets/Icons/SVG/Icon-twitter.svg);
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
+    @include tablet {
+      width: 25px;
+      height: 25px;
+    }
   }
+  &__social-logo {
+    width: 20%;
+    height: 50px;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: contents;
+    }
+  }
+  &__social-logo--image {
+    width: 50px;
+    height: 50px;
+    @include tablet {
+      width: 15%;
+      height: 18%;
+      margin: 0 0 0 14%;
+    }
+  }
+
+  .test1,
+  .test2,
+  .test3 {
+    @include tablet {
+      flex-direction: column;
+      width: 30%;
+      height: 15%;
+      flex-flow: wrap;
+    }
+  }
+
   &__management {
     font-weight: 600;
     width: 80%;
     padding: 0;
     margin: 0;
     font-size: 14px;
+    @include tablet {
+      width: 100%;
+      height: 10%;
+      margin: 0;
+      display: inline-block;
+    }
   }
   &__management-company {
     // font-weight: 600;
     width: 90%;
     margin: 0 0 24px 0;
     padding: 0;
+    @include tablet {
+      width: 100%;
+      height: 10%;
+      margin: 0;
+      display: inline-block;
+    }
   }
 
   &__address {
     width: 50%;
     margin: 0 0 24px 0;
+    @include tablet {
+      width: 100%;
+      height: 10%;
+      margin: 0;
+      display: inline-block;
+    }
   }
   &__email {
     width: 60%;
     margin: 0 0 40px 0;
-    // font-size: 14px;
+    @include tablet {
+      width: 20%;
+      height: 10%;
+      margin: 0;
+      display: inline-block;
+    }
   }
   &__copy-right {
     margin: 0 0 40px 0;
-    // font-size: 14px;
     width: 75%;
+    @include tablet {
+      width: 20%;
+      height: 10%;
+      margin: 0;
+      display: inline-block;
+    }
   }
 }
