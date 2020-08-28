@@ -187,8 +187,9 @@ html {
   font-weight: bold;
   margin: 32px 16px 24px 16px;
   @include tablet {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin: 48px 0 32px 24px;
+    font-weight: bold;
   }
 }
 
@@ -228,6 +229,7 @@ html {
       font-size: 1.5rem;
       margin: 48px 0 40px 24px;
       align-self: flex-start;
+      font-weight: bold;
     }
   }
 
@@ -246,16 +248,18 @@ html {
     margin: 0 0 24px 16px;
     align-self: flex-start;
     @include tablet {
-      margin: 0 0 32px 24px;
+      margin: 0 0 28px 24px;
       width: 100%;
+      font-size: 1.5rem;
+      font-weight: bold;
     }
   }
   &__content {
     font-size: 0.8rem;
-    // line-height: 18px;
     display: flex;
-    width: 90%;
+    width: 95%;
     line-height: 1.3rem;
+    margin: 0 16px 0 16px;
     @include tablet {
       width: 45%;
       margin: 0 24px;
@@ -290,9 +294,6 @@ html {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    // height: 150%;
-    // margin: 56px 0 0 0;
-    // padding: 56px 0 0 0;
   }
 
   &__title {
@@ -313,7 +314,6 @@ html {
   }
   &__img {
     margin: 8px 16px 8px 16px;
-    // padding: 8px 0 8px 0;
     @include tablet {
       margin: 0;
     }
@@ -321,19 +321,18 @@ html {
 
   &__img--top-left {
     background-image: url(../Assets/Images/Photo-gallery-1.jpg);
-    width: 100vw;
+    width: 90vw;
     height: 50vw;
     background-size: cover;
     margin-top: 24px;
     @include tablet {
       width: 29vw;
       height: 16.5vw;
-      // margin: 24px;
     }
   }
   &__img--top-center {
     background-image: url(../Assets/Images/Photo-gallery-2.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -344,7 +343,7 @@ html {
   }
   &__img--top-right {
     background-image: url(../Assets/Images/Photo-gallery-3.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -355,7 +354,7 @@ html {
   }
   &__img--middle-left {
     background-image: url(../Assets/Images/Photo-gallery-4.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -366,7 +365,7 @@ html {
   }
   &__img--middle-center {
     background-image: url(../Assets/Images/Photo-gallery-5.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -377,7 +376,7 @@ html {
   }
   &__img--middle-right {
     background-image: url(../Assets/Images/Photo-gallery-6.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -388,7 +387,7 @@ html {
   }
   &__img--bottom-left {
     background-image: url(../Assets/Images/Photo-gallery-7.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -399,7 +398,7 @@ html {
   }
   &__img--bottom-center {
     background-image: url(../Assets/Images/Photo-gallery-8.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -409,7 +408,7 @@ html {
   }
   &__img--bottom-right {
     background-image: url(../Assets/Images/Photo-gallery-9.jpg);
-    width: 100vw;
+    width: 95vw;
     height: 50vw;
     background-size: cover;
     margin: 8px 0 40px 0;
@@ -552,7 +551,6 @@ html {
     }
   }
   &__management-company {
-    // font-weight: 600;
     width: 90%;
     margin: 0 0 24px 0;
     padding: 0;
