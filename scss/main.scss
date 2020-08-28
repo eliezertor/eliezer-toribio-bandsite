@@ -31,13 +31,7 @@ html {
     flex-direction: column;
     @include tablet {
       display: flex;
-      // flex-direction: column;
       flex-direction: row;
-      // justify-content: space-between;
-      // width: 100%;
-      // align-content: center;
-      // align-items: center;
-      // flex-direction: column;
     }
   }
   &__nav-logo--link {
@@ -98,20 +92,22 @@ html {
     display: flex;
     justify-content: space-evenly;
     box-sizing: border-box;
+    border-bottom: 4px solid $text-color;
     @include tablet {
       width: 17%;
       padding: 0 0 9% 1%;
       margin: 0 10% 0 0;
       height: 40%;
       display: flex;
-      // justify-content: space-evenly;
       display: inline-block;
       box-sizing: border-box;
+      border-bottom: 4px solid $text-color;
+      font-size: 0.9rem;
     }
-  }
-  &__nav-list--left:hover {
-    border-bottom: 5px solid $text-color;
-    font-weight: 600;
+    &:hover {
+      border-bottom: 4px solid $text-color;
+      font-weight: 600;
+    }
   }
   &__nav-list--right {
     width: 50%;
@@ -129,10 +125,9 @@ html {
       display: inline-block;
       box-sizing: border-box;
     }
-  }
-
-  &__nav-list--right:hover {
-    border-bottom: 5px solid $text-color;
+    &:hover {
+      border-bottom: 4px solid $text-color;
+    }
   }
 
   &__nav-list-links {
@@ -170,12 +165,14 @@ html {
     z-index: 1;
     @include tablet {
       margin: 0 0 0 24px;
-      font-size: 3.5rem;
+      font-size: 3.6rem;
       width: 80%;
       height: 40%;
       line-height: 4.5rem;
       display: flex;
       align-items: center;
+      color: $text-color;
+      letter-spacing: 1px;
     }
   }
 }
@@ -260,10 +257,10 @@ html {
     width: 90%;
     line-height: 1.3rem;
     @include tablet {
-      width: 44%;
+      width: 45%;
       margin: 0 24px;
       font-size: 0.9rem;
-      line-height: 1.5rem;
+      line-height: 1.4rem;
     }
   }
 
@@ -307,7 +304,7 @@ html {
       width: 100%;
       height: 152px;
       font-size: 2.4rem;
-      margin: 0 0 0 0;
+      margin: 0 0 0 24px;
       display: flex;
       align-content: center;
       align-self: center;
@@ -324,7 +321,7 @@ html {
 
   &__img--top-left {
     background-image: url(../Assets/Images/Photo-gallery-1.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     margin-top: 24px;
@@ -336,7 +333,7 @@ html {
   }
   &__img--top-center {
     background-image: url(../Assets/Images/Photo-gallery-2.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -347,7 +344,7 @@ html {
   }
   &__img--top-right {
     background-image: url(../Assets/Images/Photo-gallery-3.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -358,7 +355,7 @@ html {
   }
   &__img--middle-left {
     background-image: url(../Assets/Images/Photo-gallery-4.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -369,7 +366,7 @@ html {
   }
   &__img--middle-center {
     background-image: url(../Assets/Images/Photo-gallery-5.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -380,7 +377,7 @@ html {
   }
   &__img--middle-right {
     background-image: url(../Assets/Images/Photo-gallery-6.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -391,7 +388,7 @@ html {
   }
   &__img--bottom-left {
     background-image: url(../Assets/Images/Photo-gallery-7.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -402,7 +399,7 @@ html {
   }
   &__img--bottom-center {
     background-image: url(../Assets/Images/Photo-gallery-8.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     @include tablet {
@@ -412,7 +409,7 @@ html {
   }
   &__img--bottom-right {
     background-image: url(../Assets/Images/Photo-gallery-9.jpg);
-    width: 90vw;
+    width: 100vw;
     height: 50vw;
     background-size: cover;
     margin: 8px 0 40px 0;
@@ -436,8 +433,9 @@ html {
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    height: 650px;
+    width: 98%;
+    height: 49.5vw;
+    align-content: flex-start;
   }
 
   &__touch {
@@ -447,8 +445,12 @@ html {
     padding: 0;
     width: 90%;
     @include tablet {
-      width: 30%;
+      width: 33%;
       height: 10%;
+      font-size: 2.2rem;
+      margin: 40px 0 24px 12px;
+      letter-spacing: 1px;
+      color: $text-color;
     }
   }
   &__social {
@@ -457,11 +459,10 @@ html {
     display: flex;
     justify-content: space-evenly;
     @include tablet {
-      margin: 40px 0 0 0;
       align-items: center;
-      width: 30%;
+      width: 24%;
       height: 15%;
-      margin: 0 0 0 5%;
+      margin: 38px 0 0 0;
     }
   }
   &__social-link--insta {
@@ -470,8 +471,10 @@ html {
     height: 50px;
     background-repeat: no-repeat;
     @include tablet {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      color: $text-color;
     }
   }
   &__social-link--face {
@@ -480,8 +483,9 @@ html {
     height: 50px;
     background-repeat: no-repeat;
     @include tablet {
-      width: 25px;
-      height: 25px;
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
     }
   }
   &__social-link--twitter {
@@ -492,6 +496,7 @@ html {
     @include tablet {
       width: 25px;
       height: 25px;
+      background-size: 25px 25px;
     }
   }
   &__social-logo {
@@ -510,7 +515,9 @@ html {
     @include tablet {
       width: 15%;
       height: 18%;
-      margin: 0 0 0 14%;
+      margin: 34px 0 0 22.5%;
+      font-weight: bold;
+      filter: brightness(200%);
     }
   }
 
@@ -520,8 +527,11 @@ html {
     @include tablet {
       flex-direction: column;
       width: 30%;
-      height: 15%;
-      flex-flow: wrap;
+      height: 55%;
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-evenly;
+      margin: 25px 0 0 12px;
     }
   }
 
@@ -533,9 +543,12 @@ html {
     font-size: 14px;
     @include tablet {
       width: 100%;
-      height: 10%;
-      margin: 0;
+      height: 20%;
+      margin: 0 0 7% 0;
       display: inline-block;
+      font-size: 1rem;
+      align-items: center;
+      padding: 0 0 0 0;
     }
   }
   &__management-company {
@@ -545,9 +558,10 @@ html {
     padding: 0;
     @include tablet {
       width: 100%;
-      height: 10%;
-      margin: 0;
+      height: 50%;
+      margin: 2% 0 0 0;
       display: inline-block;
+      font-size: 0.9rem;
     }
   }
 
@@ -555,30 +569,33 @@ html {
     width: 50%;
     margin: 0 0 24px 0;
     @include tablet {
-      width: 100%;
-      height: 10%;
-      margin: 0;
+      width: 80%;
+      height: 20%;
+      margin: 0 0 5% 0;
       display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1.4rem;
     }
   }
   &__email {
     width: 60%;
     margin: 0 0 40px 0;
     @include tablet {
-      width: 20%;
-      height: 10%;
+      width: 100%;
+      height: 20%;
       margin: 0;
       display: inline-block;
+      font-size: 0.9rem;
     }
   }
   &__copy-right {
     margin: 0 0 40px 0;
     width: 75%;
     @include tablet {
-      width: 20%;
+      width: 100%;
       height: 10%;
-      margin: 0;
-      display: inline-block;
+      margin: 0 0 0 12px;
+      font-size: 0.9rem;
     }
   }
 }
