@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", Sans-serif, Serif;
 }
 
 @font-face {
@@ -80,7 +80,7 @@ html {
 .header__nav-logo--link {
   width: 2rem;
   height: 12vw;
-  margin: 0 0 0 0;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -121,7 +121,7 @@ html {
 }
 
 .header__nav-logo-image {
-  width: 30vw;
+  width: 35vw;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -329,7 +329,7 @@ html {
   font-size: 1.5rem;
   width: 65%;
   line-height: 2rem;
-  margin: 0 0 0 16px;
+  margin: 0 0 0 5%;
   z-index: 1;
 }
 
@@ -353,8 +353,8 @@ html {
 
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 30%;
-    font-size: 3rem;
+    width: 40%;
+    font-size: 3.5rem;
     margin-left: 12.6%;
   }
 }
@@ -372,7 +372,7 @@ html {
           align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 32px 16px 24px 16px;
+  margin: 10% 5% 9% 6%;
 }
 
 @media screen and (min-width: 768px) {
@@ -386,6 +386,18 @@ html {
 @media screen and (min-width: 1200px) {
   .title {
     margin: 3.4% 0 3.4% 12.6%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title--the {
+    text-transform: lowercase;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .title--the {
+    text-transform: lowercase;
   }
 }
 
@@ -459,6 +471,7 @@ html {
     -ms-flex-item-align: start;
         align-self: flex-start;
     font-weight: bold;
+    line-height: 2.3rem;
   }
 }
 
@@ -512,13 +525,13 @@ html {
 }
 
 .main__content {
-  font-size: 0.8rem;
+  font-size: 0.8em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 95%;
-  line-height: 1.3rem;
-  margin: 0 16px 0 16px;
+  width: 90%;
+  line-height: 1.2rem;
+  margin: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -526,7 +539,7 @@ html {
     width: 45%;
     margin: 0 24px;
     font-size: 0.9rem;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
   }
 }
 
@@ -538,13 +551,9 @@ html {
   }
 }
 
-.main__content--top {
-  margin: 0 16px 24px 16px;
-}
-
 @media screen and (min-width: 768px) {
   .main__content--top {
-    margin: 0 24px;
+    margin: 0 3%;
   }
 }
 
@@ -556,7 +565,7 @@ html {
 }
 
 .main__content--bottom {
-  margin: 0 16px 40px 16px;
+  margin: 9% 5% 13% 5%;
 }
 
 @media screen and (min-width: 768px) {
@@ -587,6 +596,12 @@ html {
 @media screen and (min-width: 768px) {
   .gallery {
     padding-bottom: 4%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery {
+    padding-bottom: 2%;
   }
 }
 
@@ -630,10 +645,8 @@ html {
 
 @media screen and (min-width: 768px) {
   .gallery__img {
-    width: 224px;
-    height: 126px;
     width: 30vw;
-    height: 20vw;
+    height: 17vw;
     margin: 1%;
   }
 }
@@ -714,7 +727,9 @@ html {
 
 @media screen and (min-width: 1200px) {
   .footer {
-    height: 25vw;
+    height: 55vh;
+    width: 100%;
+    margin: 0;
   }
 }
 
@@ -753,6 +768,7 @@ html {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  margin-left: 2%;
 }
 
 @media screen and (min-width: 768px) {
@@ -768,7 +784,7 @@ html {
 
 @media screen and (min-width: 1200px) {
   .footer__social {
-    height: 23%;
+    height: 18%;
     margin: 0;
     width: 13%;
     -webkit-box-align: end;
@@ -840,8 +856,8 @@ html {
 @media screen and (min-width: 1200px) {
   .footer__social-logo--image {
     width: 8%;
-    height: 23%;
-    margin-left: 38.5%;
+    height: 17%;
+    margin-left: 37%;
   }
 }
 
@@ -877,8 +893,10 @@ html {
   }
 }
 
-.footer .management__top {
-  margin-left: 11%;
+@media screen and (min-width: 1200px) {
+  .footer .management__top {
+    margin-left: 11%;
+  }
 }
 
 .footer__management {

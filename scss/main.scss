@@ -2,7 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
-  font-family: "Avenir";
+  font-family: "Avenir", Sans-serif, Serif;
 }
 
 @import "../scss/partials/fonts";
@@ -39,7 +39,7 @@ html {
   &__nav-logo--link {
     width: 2rem;
     height: 12vw;
-    margin: 0 0 0 0;
+    margin: 0;
     display: flex;
     align-items: center;
     align-items: flex-end;
@@ -60,7 +60,7 @@ html {
     }
   }
   &__nav-logo-image {
-    width: 30vw;
+    width: 35vw;
     height: auto;
     box-sizing: border-box;
     @include tablet {
@@ -195,7 +195,7 @@ html {
     font-size: 1.5rem;
     width: 65%;
     line-height: 2rem;
-    margin: 0 0 0 16px;
+    margin: 0 0 0 5%;
     z-index: 1;
     @include tablet {
       margin: 0 0 0 24px;
@@ -209,8 +209,9 @@ html {
       letter-spacing: 1px;
     }
     @include desktop {
-      width: 30%;
-      font-size: 3rem;
+      width: 40%;
+      font-size: 3.5rem;
+
       margin-left: 12.6%;
     }
   }
@@ -224,7 +225,7 @@ html {
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 32px 16px 24px 16px;
+  margin: 10% 5% 9% 6%;
   @include tablet {
     font-size: 2.3rem;
     margin: 48px 0 32px 24px;
@@ -232,6 +233,15 @@ html {
   }
   @include desktop {
     margin: 3.4% 0 3.4% 12.6%;
+  }
+}
+
+.title--the {
+  @include tablet {
+    text-transform: lowercase;
+  }
+  @include desktop {
+    text-transform: lowercase;
   }
 }
 
@@ -277,6 +287,7 @@ html {
       margin: 48px 0 40px 24px;
       align-self: flex-start;
       font-weight: bold;
+      line-height: 2.3rem;
     }
     @include desktop {
       margin: 3.4% 0 0 18.5%;
@@ -312,16 +323,16 @@ html {
     }
   }
   &__content {
-    font-size: 0.8rem;
+    font-size: 0.8em;
     display: flex;
-    width: 95%;
-    line-height: 1.3rem;
-    margin: 0 16px 0 16px;
+    width: 90%;
+    line-height: 1.2rem;
+    margin: auto;
     @include tablet {
       width: 45%;
       margin: 0 24px;
       font-size: 0.9rem;
-      line-height: 1.4rem;
+      line-height: 1.5rem;
     }
     @include desktop {
       width: 30%;
@@ -331,9 +342,8 @@ html {
   }
 
   &__content--top {
-    margin: 0 16px 24px 16px;
     @include tablet {
-      margin: 0 24px;
+      margin: 0 3%;
     }
     @include desktop {
       margin-left: 18.5%;
@@ -341,7 +351,7 @@ html {
     }
   }
   &__content--bottom {
-    margin: 0 16px 40px 16px;
+    margin: 9% 5% 13% 5%;
     @include tablet {
       margin: 0 24px 0 0;
     }
@@ -359,6 +369,9 @@ html {
   background-color: $gallery-color;
   @include tablet {
     padding-bottom: 4%;
+  }
+  @include desktop {
+    padding-bottom: 2%;
   }
 
   &__title {
@@ -388,10 +401,8 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     @include tablet {
-      width: 224px;
-      height: 126px;
       width: 30vw;
-      height: 20vw;
+      height: 17vw;
       margin: 1%;
     }
     @include desktop {
@@ -446,7 +457,9 @@ html {
     align-content: flex-start;
   }
   @include desktop {
-    height: 25vw;
+    height: 55vh;
+    width: 100%;
+    margin: 0;
   }
 
   &__touch {
@@ -473,6 +486,7 @@ html {
     height: 10%;
     display: flex;
     justify-content: space-evenly;
+    margin-left: 2%;
     @include tablet {
       align-items: center;
       width: 24%;
@@ -480,7 +494,7 @@ html {
       margin: 38px 0 0 0;
     }
     @include desktop {
-      height: 23%;
+      height: 18%;
       margin: 0;
       width: 13%;
       align-items: flex-end;
@@ -530,11 +544,10 @@ html {
     }
     @include desktop {
       width: 8%;
-      height: 23%;
-      margin-left: 38.5%;
+      height: 17%;
+      margin-left: 37%;
     }
   }
-
   .management__top,
   .management__middle,
   .management__bottom {
@@ -554,8 +567,10 @@ html {
     }
   }
 
-  .management__top {
-    margin-left: 11%;
+  @include desktop {
+    .management__top {
+      margin-left: 11%;
+    }
   }
 
   &__management {
