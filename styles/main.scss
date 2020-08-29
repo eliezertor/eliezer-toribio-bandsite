@@ -5,9 +5,9 @@ body {
   font-family: "Avenir", Sans-serif, Serif;
 }
 
-@import "../scss/partials/fonts";
-@import "../scss/partials/variables";
-@import "../scss/partials/mixins";
+@import "../styles/partials/fonts";
+@import "../styles/partials/variables";
+@import "../styles/partials/mixins";
 
 body,
 html {
@@ -118,7 +118,7 @@ html {
       display: flex;
       display: inline-block;
       box-sizing: border-box;
-      border-bottom: 4px solid $text-color;
+      border-bottom: 5px solid $text-color;
       font-size: 0.9rem;
     }
     @include desktop {
@@ -177,7 +177,7 @@ html {
   align-items: center;
   &__image {
     background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)),
-      url(/Assets/Images/yvette-unsplash.jpg);
+      url(../Assets/Images/yvette-unsplash.jpg);
     height: 57.5vw;
     width: 100%;
     background-size: cover;
