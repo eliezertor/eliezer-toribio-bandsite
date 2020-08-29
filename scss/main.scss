@@ -30,7 +30,6 @@ html {
     align-items: center;
     flex-direction: column;
     @include tablet {
-      display: flex;
       flex-direction: row;
     }
     @include desktop {
@@ -45,7 +44,7 @@ html {
     align-items: center;
     align-items: flex-end;
     justify-content: center;
-    padding: 0 0 0 0;
+    padding: 0;
     @include tablet {
       width: 20vw;
       box-sizing: border-box;
@@ -78,8 +77,8 @@ html {
   &__nav-options {
     width: 100%;
     height: 30px;
-    margin: 8px 8px 0 0;
-    padding: 0 0 0 0;
+    margin: 8px 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
@@ -88,9 +87,6 @@ html {
       height: 20%;
       display: flex;
       display: inline-block;
-      align-self: center;
-      align-content: center;
-      align-items: center;
       box-sizing: border-box;
       margin: 0;
     }
@@ -104,11 +100,12 @@ html {
   }
   &__nav-list--left {
     width: 50%;
-    padding: 0 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     box-sizing: border-box;
-    border-bottom: 4px solid $text-color;
+    border-bottom: 5px solid $text-color;
+    scroll-behavior: smooth;
     &:hover {
       border-bottom: 5px solid $text-color;
       font-weight: 600;
@@ -125,7 +122,7 @@ html {
       font-size: 0.9rem;
     }
     @include desktop {
-      margin: 0 0 0 0;
+      margin: 0;
       width: 8%;
       height: 10%;
       padding: 0 0 4.3% 0.6%;
@@ -135,7 +132,7 @@ html {
   }
   &__nav-list--right {
     width: 50%;
-    padding: 0 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     box-sizing: border-box;
@@ -258,9 +255,9 @@ html {
     margin: auto;
     padding: 0;
     @include tablet {
-      width: 93.8vw;
+      width: 95vw;
       height: 47vw;
-      margin: 0 24px 0 24px;
+      margin: 0 24px;
     }
     @include desktop {
       height: 450px;
@@ -311,7 +308,7 @@ html {
       font-weight: bold;
     }
     @include desktop {
-      margin: 2.5% 0 1% 18.5%;
+      margin: 2.5% 0 1.5% 18.5%;
     }
   }
   &__content {
@@ -326,6 +323,11 @@ html {
       font-size: 0.9rem;
       line-height: 1.4rem;
     }
+    @include desktop {
+      width: 30%;
+      margin: auto;
+      line-height: 1.6rem;
+    }
   }
 
   &__content--top {
@@ -333,156 +335,103 @@ html {
     @include tablet {
       margin: 0 24px;
     }
+    @include desktop {
+      margin-left: 18.5%;
+      margin-right: 0;
+    }
   }
   &__content--bottom {
     margin: 0 16px 40px 16px;
     @include tablet {
       margin: 0 24px 0 0;
     }
+    @include desktop {
+      margin-left: 40px;
+    }
   }
 }
 
 .gallery {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: auto;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 10%;
   background-color: $gallery-color;
   @include tablet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    padding-bottom: 4%;
   }
 
   &__title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 32px 0 0 16px;
-    align-self: end;
+    margin: 10% 40% 4% 0;
+
     @include tablet {
       width: 100%;
-      height: 152px;
       font-size: 2.4rem;
-      margin: 0 0 0 24px;
+      margin-left: 4%;
       display: flex;
-      align-content: center;
-      align-self: center;
+      margin: 5% 3.5%;
+    }
+    @include desktop {
+      margin: 0 0 0 2%;
+      width: 78%;
+      height: 126px;
+      font-size: 2rem;
       align-items: center;
     }
   }
   &__img {
-    margin: 8px 16px 8px 16px;
+    width: 90vw;
+    height: 50vw;
+    margin: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
     @include tablet {
-      margin: 0;
+      width: 224px;
+      height: 126px;
+      width: 30vw;
+      height: 20vw;
+      margin: 1%;
+    }
+    @include desktop {
+      width: 24.5%;
+      height: 14vw;
+      margin: 0.7%;
     }
   }
 
   &__img--top-left {
     background-image: url(../Assets/Images/Photo-gallery-1.jpg);
-    width: 90vw;
-    height: 50vw;
-    background-size: cover;
-    margin-top: 24px;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-    }
   }
   &__img--top-center {
     background-image: url(../Assets/Images/Photo-gallery-2.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0 0 0;
-    }
   }
   &__img--top-right {
     background-image: url(../Assets/Images/Photo-gallery-3.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0 0 0;
-    }
   }
   &__img--middle-left {
     background-image: url(../Assets/Images/Photo-gallery-4.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0 0 0;
-    }
   }
   &__img--middle-center {
     background-image: url(../Assets/Images/Photo-gallery-5.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0 0 0;
-    }
   }
   &__img--middle-right {
     background-image: url(../Assets/Images/Photo-gallery-6.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0 0 0;
-    }
   }
   &__img--bottom-left {
     background-image: url(../Assets/Images/Photo-gallery-7.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 24px 0;
-    }
   }
   &__img--bottom-center {
     background-image: url(../Assets/Images/Photo-gallery-8.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-    }
   }
   &__img--bottom-right {
     background-image: url(../Assets/Images/Photo-gallery-9.jpg);
-    width: 95vw;
-    height: 50vw;
-    background-size: cover;
-    margin: 8px 0 40px 0;
-    @include tablet {
-      width: 29vw;
-      height: 16.5vw;
-      margin: 0;
-    }
   }
 }
 
 .footer {
   width: 95%;
-  height: 100%;
   background-color: $primary-cta;
   color: $text-color;
   display: flex;
@@ -495,6 +444,9 @@ html {
     width: 98%;
     height: 49.5vw;
     align-content: flex-start;
+  }
+  @include desktop {
+    height: 25vw;
   }
 
   &__touch {
@@ -511,6 +463,10 @@ html {
       letter-spacing: 1px;
       color: $text-color;
     }
+    @include desktop {
+      margin: 3.3% 0 0 11%;
+      width: 18%;
+    }
   }
   &__social {
     width: 50%;
@@ -523,9 +479,15 @@ html {
       height: 15%;
       margin: 38px 0 0 0;
     }
+    @include desktop {
+      height: 23%;
+      margin: 0;
+      width: 13%;
+      align-items: flex-end;
+    }
   }
-  &__social-link--insta {
-    background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
+
+  &__social-link {
     width: 50px;
     height: 50px;
     background-repeat: no-repeat;
@@ -536,27 +498,15 @@ html {
       color: $text-color;
     }
   }
+
+  &__social-link--insta {
+    background-image: url(../Assets/Icons/SVG/Icon-instagram.svg);
+  }
   &__social-link--face {
     background-image: url(../Assets/Icons/SVG/Icon-facebook.svg);
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    @include tablet {
-      width: 20px;
-      height: 20px;
-      background-size: 20px 20px;
-    }
   }
   &__social-link--twitter {
     background-image: url(../Assets/Icons/SVG/Icon-twitter.svg);
-    width: 50px;
-    height: 50px;
-    background-repeat: no-repeat;
-    @include tablet {
-      width: 25px;
-      height: 25px;
-      background-size: 25px 25px;
-    }
   }
   &__social-logo {
     width: 20%;
@@ -578,11 +528,16 @@ html {
       font-weight: bold;
       filter: brightness(200%);
     }
+    @include desktop {
+      width: 8%;
+      height: 23%;
+      margin-left: 38.5%;
+    }
   }
 
-  .test1,
-  .test2,
-  .test3 {
+  .management__top,
+  .management__middle,
+  .management__bottom {
     @include tablet {
       flex-direction: column;
       width: 30%;
@@ -592,6 +547,15 @@ html {
       justify-content: space-evenly;
       margin: 25px 0 0 12px;
     }
+    @include desktop {
+      height: 50%;
+      width: 17%;
+      margin: 3% 0 0 0%;
+    }
+  }
+
+  .management__top {
+    margin-left: 11%;
   }
 
   &__management {
@@ -654,6 +618,9 @@ html {
       height: 10%;
       margin: 0 0 0 12px;
       font-size: 0.9rem;
+    }
+    @include desktop {
+      margin-left: 11%;
     }
   }
 }
