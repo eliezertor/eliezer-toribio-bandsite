@@ -442,7 +442,7 @@ html {
 }
 .main__name {
   font-weight: 600;
-  width: 100%;
+  width: 90%;
   margin: 0 0 40px 16px;
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -878,11 +878,6 @@ html {
   }
 }
 @media screen and (min-width: 1200px) {
-  .footer__copy-right {
-    margin-left: 11%;
-  }
-}
-/*# sourceMappingURL=main.css.map */nd (min-width: 1200px) {
   .footer__copy-right {
     margin-left: 11%;
   }
