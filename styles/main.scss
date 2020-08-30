@@ -409,6 +409,10 @@ html {
       width: 24.5%;
       height: 14vw;
       margin: 0.7%;
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -617,12 +621,16 @@ html {
   &__email {
     width: 60%;
     margin: 0 0 40px 0;
+    text-decoration: none;
+    color: $text-color;
     @include tablet {
-      width: 100%;
+      width: 40%;
       height: 20%;
       margin: 0;
       display: inline-block;
       font-size: 0.9rem;
+      // text-decoration: none;
+      // color: $text-color;
     }
   }
   &__copy-right {
