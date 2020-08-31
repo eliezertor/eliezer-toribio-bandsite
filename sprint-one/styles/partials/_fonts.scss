@@ -1,16 +1,19 @@
 @font-face {
   font-family: "Avenir";
-  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Regular.otf);
+  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Regular.otf)
+    format(truetype);
 }
 
 @font-face {
   font-family: "Avenir";
-  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Demi.otf);
+  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Demi.otf)
+    format(truetype);
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Avenir";
-  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Bold.otf);
+  src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Bold.otf)
+    format(truetype);
   font-weight: bold;
 }
