@@ -422,62 +422,6 @@ body {
   }
 }
 
-// COMMENTS
-
-// TODO: Make comments boxes smaller
-// FIXME:
-.comments {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  &__title {
-    align-content: flex-start;
-    margin: 2.5% 50% 2.5% 0;
-    font-size: 2.2em;
-    font-weight: 900;
-    color: $primary-cta;
-  }
-  &__label-name {
-    display: block;
-  }
-  &__name {
-    background-color: $gallery-color;
-    border-radius: 5px;
-    box-sizing: border-box;
-    display: block;
-    height: 3vw;
-    padding-left: 3%;
-    width: 35vw;
-
-    &:hover {
-      border: 3px solid black;
-    }
-  }
-  &__label-comment {
-    display: block;
-  }
-  &__comment {
-    @extend .comments__name;
-    height: 10em;
-    padding-bottom: 16%;
-    padding-left: 3%;
-    &:hover {
-      border: 3px solid black;
-    }
-  }
-  &__btn {
-    display: block;
-    background-color: $primary-cta;
-    width: 11em;
-    height: 3em;
-    color: $text-color;
-    font-size: 1em;
-    // font-weight: 600;
-    border-radius: 5px;
-    margin: 5% 0 5% 55%;
-  }
-}
-
 // START OF FOOTER
 .footer {
   width: 95%;
