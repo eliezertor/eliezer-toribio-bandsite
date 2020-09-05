@@ -1,5 +1,38 @@
 // SHOWS PAGE
 
+const show = [
+  {
+    date: "Mon Dec 17 2018",
+    venue: "Ronald Lane",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Tue Jul 18 2019",
+    venue: "Pier 3 East",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Fri Jul 22 2019",
+    venue: "View Loungue",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Mon Dec 17 2018",
+    venue: "Hyatt Agency",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Mon Dec 17 2018",
+    venue: "Moscow Center",
+    location: "San Francisco, CA",
+  },
+  {
+    date: "Mon Dec 17 2018",
+    venue: "Pres Club",
+    location: "San Francisco, CA",
+  },
+];
+
 function makeScheduleDiv() {
   const showParent = document.createElement("div");
   showParent.classList.add("show");
@@ -21,51 +54,54 @@ function makeShowHeader() {
   showTitle.classList.add("show__title");
   showHeader.appendChild(showTitle);
   showTitle.innerHTML = "Shows";
+  loadShow();
 }
 
 makeShowHeader();
 
-function makeShowList() {
+function loadShow(element) {
+  show.forEach((element) => makeShowList(element));
+}
+
+function makeShowList(shows) {
   const show = document.querySelector(".show");
   const ShowSchedule = document.createElement("div"); // Parent container for schedule
   ShowSchedule.classList.add("show__schedule");
-  show.parentNode.insertBefore(ShowSchedule, show.nextElementSibling);
+  show.appendChild(ShowSchedule);
 
-  const showDateTitle = document.createElement("div"); // Date heading
+  const showDateTitle = document.createElement("h4"); // Date heading
   showDateTitle.classList.add("show__schedule-title");
-  show.appendChild(showDateTitle);
+  ShowSchedule.appendChild(showDateTitle);
 
-  const showDate = document.createElement("time"); // Date
+  const showDate = document.createElement("p"); // Date
   showDate.classList.add("show__schedule-date");
-  show.appendChild(showDate);
+  ShowSchedule.appendChild(showDate);
 
-  const showVenue = document.createElement("div"); // Venue heading
+  const showVenue = document.createElement("h4"); // Venue heading
   showVenue.classList.add("show__schedule-venue");
-  show.appendChild(showVenue);
+  ShowSchedule.appendChild(showVenue);
 
   const showVenueName = document.createElement("p"); // Venue name
   showVenueName.classList.add("show__schedule-venue-name");
-  show.appendChild(showVenueName);
+  ShowSchedule.appendChild(showVenueName);
 
-  const showLocation = document.createElement("div"); // Location
+  const showLocation = document.createElement("h4"); // Location
   showLocation.classList.add("show__schedule-location");
-  show.appendChild(showLocation);
+  ShowSchedule.appendChild(showLocation);
 
   const showCity = document.createElement("p"); // City
   showCity.classList.add("show__schedule-city");
-  show.appendChild(showCity);
+  ShowSchedule.appendChild(showCity);
 
   const showButton = document.createElement("Button"); // Button
   showButton.classList.add("show__button");
-  show.appendChild(showButton);
+  ShowSchedule.appendChild(showButton);
 
   showDateTitle.innerText = "DATE";
-  showDate.innerText = "Mon Dec 17 2018";
+  showDate.innerText = shows.date;
   showVenue.innerText = "VENUE";
-  showVenueName.innerText = "Ronald Lane";
+  showVenueName.innerText = shows.venue;
   showLocation.innerText = "LOCATION";
-  showCity.innerText = "San Francisco, Ca";
+  showCity.innerText = shows.location;
   showButton.innerText = "BUT TICKETS";
 }
-
-makeShowList();
