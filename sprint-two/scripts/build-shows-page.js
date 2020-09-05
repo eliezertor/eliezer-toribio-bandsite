@@ -1,3 +1,5 @@
+// BIO PAGE AND FORM
+
 const comments = [
   {
     name: "Theodore Duncan",
@@ -29,9 +31,9 @@ let formattedDate =
   "/" +
   currentDate.getFullYear();
 
+// TAKES VALUE FROM FORM AND PUSHES INTO COMMENTS ARRAY
 const form = document.getElementById("form");
 
-// TAKES VALUE FROM FORM AND PUSHES INTO COMMENTS ARRAY
 form.onsubmit = (event) => {
   event.preventDefault();
   const name = event.target.name.value;
@@ -73,28 +75,28 @@ function loadComments() {
 
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER
 function makeSection(comment) {
-  let referenceParent = document.querySelector(".comments__return");
+  const referenceParent = document.querySelector(".comments__return");
   const separation = document.createElement("div");
   separation.classList.add("comments__separation");
   referenceParent.appendChild(separation);
-  //this makes the picture
+  //MAKES PICTURE
   const commentsPicture = document.createElement("div");
   commentsPicture.classList.add("comments__picture");
   separation.appendChild(commentsPicture);
-  //this makes the h2
-  let commenterName = document.createElement("h2");
+  //MAKES H2
+  const commenterName = document.createElement("h2");
   commenterName.classList.add("comments__commenter-name");
   separation.appendChild(commenterName);
-  // this makes the date
-  let date = document.createElement("span");
+  // MAKES DATE
+  const date = document.createElement("span");
   date.classList.add("comments__date");
   separation.appendChild(date);
-  // this makes the paragraph
-  let commenterPara = document.createElement("p");
+  // MAKES PARAGRAPH
+  const commenterPara = document.createElement("p");
   commenterPara.classList.add("comments__commenter-paragraph");
   separation.appendChild(commenterPara);
 
-  commenterPara.innerText = comment.comment;
   commenterName.innerText = comment.name;
   date.innerText = comment.date;
+  commenterPara.innerText = comment.comment;
 }
