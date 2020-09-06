@@ -9,6 +9,8 @@ body {
   font-family: "Avenir", Sans-serif, Serif;
 }
 // START OF HEADER AND NAV
+
+// TODO: fix nav show underline
 .header {
   background-color: $navigation-background;
   height: 5.5rem;
@@ -157,9 +159,6 @@ body {
   width: 100%;
   height: auto;
   display: flex;
-  // align-items: center;
-  // justify-content: space-evenly;
-  // flex-direction: column;
   &__image {
     background: linear-gradient(rgba(50, 50, 50, 0.2), rgba(50, 50, 50, 0.2)),
       url("../Assets/Images/tolga-ahmetler-unsplash.jpg");
@@ -167,16 +166,31 @@ body {
     height: 472px;
     width: 100%;
     background-size: cover;
+    background-repeat: no-repeat;
     position: relative;
     @include tablet {
-      height: 52vw;
+      height: 670px;
+      background-size: cover;
     }
     @include desktop {
       height: 46.5vw;
+      height: 670px;
     }
   }
   &__album {
     font-size: 1rem;
+    color: $text-color;
+    position: absolute;
+    margin: 64px 0 0 24px;
+    @include tablet {
+      margin: 96px 0 0 24px;
+      font-size: 1.6rem;
+    }
+    @include desktop {
+      margin: 160px 0 0 149px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
   }
 
   &__title {
@@ -185,50 +199,142 @@ body {
     font-size: 2.2rem;
     width: 89%;
     line-height: 2.7rem;
-    margin: 20% 5% 64px 5%;
+    margin: 100px 5% 64px 24px;
     z-index: 1;
     @include tablet {
-      margin: 0 0 0 24px;
-      font-size: 3.6rem;
-      width: 80%;
+      margin: 22% 0 0 24px;
+      font-size: 3.8rem;
+      width: 75%;
       height: 40%;
       line-height: 4.5rem;
       display: flex;
-      align-items: center;
       color: $text-color;
       letter-spacing: 1px;
     }
     @include desktop {
-      width: 40%;
-      font-size: 3.5rem;
-
-      margin-left: 12.6%;
+      margin: 224px 0 0 149px;
+      font-size: 3.3rem;
+      width: 45%;
+      font-weight: 900;
     }
   }
   &__sound {
     position: absolute;
-    margin: 97% 16px 0 16px;
-    height: 120px;
-    width: 90%;
+    margin: 320px 16px 0 24px;
+    height: 110px;
+    width: 85%;
+    @include tablet {
+      margin: 430px 16px 0 16px;
+      height: 150px;
+      width: 60%;
+    }
+    @include desktop {
+      margin: 270px 0 0 606px;
+      width: 436px;
+      height: 146px;
+    }
   }
 }
 .show {
+  margin: 0 24px 0 24px;
   &__header {
     height: 10%;
   }
+  &__info-date {
+    display: none;
+    color: $Text-label-style;
+    @include tablet {
+      display: unset;
+      margin-right: 24%;
+    }
+  }
+  &__info-venue {
+    @extend .show__info-date;
+    display: none;
+    @include tablet {
+      display: unset;
+      margin-right: 15%;
+    }
+  }
+  &__info-location {
+    display: none;
+    @extend .show__info-date;
+    @include tablet {
+      display: unset;
+    }
+  }
+
   &__title {
     font-size: 2rem;
+    font-weight: 900;
   }
+  &__info {
+    display: none;
+    @include tablet {
+      font-weight: 600;
+      color: $Text-label-style;
+      display: unset;
+    }
+  }
+
   &__schedule {
-    height: 350px;
+    height: 55vh;
+    border-bottom: 1.5px solid $Mercury;
+    @include tablet {
+      height: 11vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   }
   &__schedule-title {
     font-weight: 600;
     color: $Text-label-style;
+    @include tablet {
+      display: none;
+    }
   }
   &__schedule-date {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 600;
+    @include tablet {
+    }
+  }
+  &__schedule-venue {
+    @extend .show__schedule-title;
+    @include tablet {
+      width: 33.333;
+    }
+  }
+  &__schedule-venue-name {
+    font-size: 1rem;
+    @include tablet {
+    }
+  }
+  &__schedule-location {
+    @extend .show__schedule-title;
+    @include tablet {
+    }
+  }
+  &__schedule-city {
+    font-size: 1rem;
+    @include tablet {
+    }
+  }
+  &__button {
+    // margin: 0 16px 0 16px;
+    background-color: $primary-cta;
+    width: 100%;
+    height: 14%;
+    border-radius: 4px;
+    color: $text-color;
+    font-size: 1.1rem;
+    @include tablet {
+      width: 20%;
+      height: 55%;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
   }
 }
 //
@@ -241,12 +347,14 @@ body {
   flex-direction: column;
   padding: 0 0 0 16px;
   font-size: 13px;
+  margin-top: 13%;
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
     width: 98%;
     height: 49.5vw;
     align-content: flex-start;
+    margin-top: 6%;
   }
   @include desktop {
     height: 50vh;

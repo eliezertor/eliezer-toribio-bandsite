@@ -50,10 +50,30 @@ function makeShowHeader() {
   const showHeader = document.createElement("div"); // Parent container for title
   showHeader.classList.add("show__header");
   referenceParent.appendChild(showHeader);
+
   const showTitle = document.createElement("h2"); // Title
   showTitle.classList.add("show__title");
   showHeader.appendChild(showTitle);
   showTitle.innerHTML = "Shows";
+
+  const showInfo = document.createElement("div");
+  showInfo.classList.add("show__info");
+  showHeader.appendChild(showInfo);
+
+  const showDate = document.createElement("p");
+  showDate.classList.add("show__info-date");
+  showInfo.appendChild(showDate);
+  const showVenue = document.createElement("p");
+  showVenue.classList.add("show__info-venue");
+  showInfo.appendChild(showVenue);
+  const showLocation = document.createElement("p");
+  showLocation.classList.add("show__info-location");
+  showInfo.appendChild(showLocation);
+
+  showDate.innerText = "DATE";
+  showVenue.innerText = "VENUE";
+  showLocation.innerText = "LOCATION";
+
   loadShow();
 }
 
@@ -103,5 +123,5 @@ function makeShowList(shows) {
   showVenueName.innerText = shows.venue;
   showLocation.innerText = "LOCATION";
   showCity.innerText = shows.location;
-  showButton.innerText = "BUT TICKETS";
+  showButton.innerText = "BUY TICKETS";
 }
