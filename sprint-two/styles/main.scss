@@ -437,16 +437,23 @@ body {
     margin: auto;
     padding-left: 5%;
   }
+  @include desktop {
+    align-items: center;
+  }
   &__title {
     align-content: flex-start;
     font-weight: 900;
-    width: 100%;
+    width: 80%;
     justify-self: flex-start;
     color: $primary-cta;
+    margin-left: 20px;
     @include tablet {
       font-size: 2.3em;
       margin: 1em 0 1em 1em;
       width: 100%;
+    }
+    @include desktop {
+      margin-left: 12%;
     }
   }
   &__image-picture {
@@ -456,12 +463,17 @@ body {
     border-radius: 50%;
     align-self: flex-start;
     position: absolute;
+    // background-position: -20% -50%;
+    object-position: 20% 50%;
     top: 0;
     left: 0;
     margin: 1.4em 0 0 1%;
     // clip-path: circle(100%);
     @include tablet {
       margin: 1.4em 0 0 0.9em;
+    }
+    @include desktop {
+      margin-left: 17%;
     }
   }
 
@@ -473,6 +485,8 @@ body {
       width: 75%;
       margin: auto;
     }
+    @include desktop {
+    }
   }
   // FIXME: add color to name and comment label
 
@@ -483,12 +497,15 @@ body {
     font-weight: 600;
     margin-right: 57%;
     color: $Text-label-style;
+    @include desktop {
+      margin-right: 38%;
+    }
   }
   // FIXME: width and color of text
   &__name {
     background-color: $gallery-color;
-    border-radius: 5px;
-    padding: 7% 0 0 8%;
+    border-radius: 4px;
+    padding: 5% 0 0 5%;
     box-sizing: border-box;
     font-family: "Avenir";
     display: inline-block;
@@ -499,19 +516,28 @@ body {
     border-color: $Mercury;
     outline: none;
     font-size: 0.8em;
+    &::placeholder {
+      color: black;
+      font-size: 0.9rem;
+    }
+
     &:focus {
-      border: 4px solid black;
+      border: 5px solid black;
     }
     &:focus::placeholder {
       color: transparent;
     }
     &:hover {
-      border: 1px solid black;
+      border: 2px solid black;
     }
     @include tablet {
       height: 5vw;
       padding: 1% 0 0 2%;
       width: 90%;
+    }
+    @include desktop {
+      width: 40vw;
+      height: 4vw;
     }
   }
   &__label-comment {
@@ -548,6 +574,9 @@ body {
     @include tablet {
       width: 11em;
     }
+    @include desktop {
+      margin-left: 38%;
+    }
   }
 
   &__return {
@@ -562,6 +591,9 @@ body {
       align-items: center;
       margin: auto;
     }
+    @include desktop {
+      width: 50%;
+    }
   }
   &__separation {
     border-top: 2px solid $Mercury;
@@ -569,6 +601,11 @@ body {
     width: 100%;
     flex-flow: wrap;
     margin: 0;
+  }
+  &__separation:last-child {
+    border-bottom: 2px solid $Mercury;
+    @include tablet {
+    }
   }
 
   &__commenter-name {
@@ -578,6 +615,10 @@ body {
     font-size: 0.9rem;
     margin: 10% 0 3% 20%;
     display: inline-block;
+    @include tablet {
+      margin: 3% 0 2% 13%;
+      width: 23%;
+    }
   }
   &__picture {
     width: 2.7em;
@@ -587,6 +628,9 @@ body {
     top: 0;
     margin: 2em 0 0 0;
     position: absolute;
+    @include tablet {
+      margin: 1em 0 0 1em;
+    }
   }
   &__date {
     margin-top: 15%;
@@ -594,12 +638,18 @@ body {
     font-size: 0.9em;
     height: 10%;
     color: $Text-label-style;
+    @include tablet {
+      margin: 3% 20% 0 0;
+    }
   }
   &__commenter-paragraph {
     width: 80%;
     line-height: 1.5em;
     font-size: 0.9rem;
     margin: 0 0 5% 20%;
+    @include tablet {
+      margin: 0 0 5% 13%;
+    }
   }
 }
 // START OF FOOTER
@@ -618,10 +668,12 @@ body {
     width: 98%;
     height: 49.5vw;
     align-content: flex-start;
+    margin-top: 5%;
   }
   @include desktop {
     height: 50vh;
     width: 100%;
+    margin-top: 3%;
   }
   &__touch {
     margin: 40px 0 24px 0;

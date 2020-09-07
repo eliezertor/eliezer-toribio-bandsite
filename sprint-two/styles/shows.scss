@@ -213,9 +213,10 @@ body {
     }
     @include desktop {
       margin: 224px 0 0 149px;
-      font-size: 3.3rem;
-      width: 45%;
+      font-size: 3rem;
+      width: 40%;
       font-weight: 900;
+      // line-height: 5rem;
     }
   }
   &__sound {
@@ -229,7 +230,7 @@ body {
       width: 60%;
     }
     @include desktop {
-      margin: 270px 0 0 606px;
+      margin: 270px 0 0 656px;
       width: 436px;
       height: 146px;
     }
@@ -237,15 +238,63 @@ body {
 }
 .show {
   margin: 0 24px 0 24px;
-  &__header {
-    height: 10%;
+  // width: 100%;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
   }
+  @include desktop {
+    // width: 600px;
+    // margin: 0;
+    // margin: 0 0 0 340px;
+    // display: flex;
+    // flex-direction: column;
+  }
+  &__header {
+    height: 100%;
+  }
+  @include desktop {
+    // width: 600px;
+    // display: flex;
+    // width: 600px;
+    // align-items: flex-start;
+    // display: inline-block;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  @include desktop {
+    // margin-right: 30%;
+    // width: 100%;
+    // margin: 0;
+    // display: inline-block;
+    // width: 20%;
+  }
+
+  &__info {
+    display: none;
+    @include tablet {
+      font-weight: 600;
+      color: $Text-label-style;
+      display: unset;
+    }
+    @include desktop {
+      // width: 900px;
+      // display: inline;
+    }
+  }
+
   &__info-date {
     display: none;
     color: $Text-label-style;
     @include tablet {
       display: unset;
-      margin-right: 24%;
+      margin-right: 12%;
+    }
+    @include desktop {
+      //   margin-left: ;
     }
   }
   &__info-venue {
@@ -253,7 +302,11 @@ body {
     display: none;
     @include tablet {
       display: unset;
-      margin-right: 15%;
+      // margin-right: 15%;
+      margin-left: 10%;
+    }
+    @include desktop {
+      margin-left: 1%;
     }
   }
   &__info-location {
@@ -261,19 +314,10 @@ body {
     @extend .show__info-date;
     @include tablet {
       display: unset;
+      margin-left: 5%;
     }
-  }
-
-  &__title {
-    font-size: 2rem;
-    font-weight: 900;
-  }
-  &__info {
-    display: none;
-    @include tablet {
-      font-weight: 600;
-      color: $Text-label-style;
-      display: unset;
+    @include desktop {
+      // margin-left: 1%;
     }
   }
 
@@ -282,8 +326,18 @@ body {
     border-bottom: 1.5px solid $Mercury;
     @include tablet {
       height: 11vw;
+      margin: 0;
+    }
+    @include tablet {
+      // TODO: FIX THIS
       display: flex;
+      align-items: center;
       justify-content: space-between;
+    }
+    @include desktop {
+      width: 704px;
+      display: flex;
+      height: 8vw;
       align-items: center;
     }
   }
@@ -293,11 +347,18 @@ body {
     @include tablet {
       display: none;
     }
+    @include desktop {
+      width: 70%;
+    }
   }
   &__schedule-date {
     font-size: 1.1rem;
     font-weight: 600;
     @include tablet {
+      width: 150px;
+    }
+    @include desktop {
+      width: 90%;
     }
   }
   &__schedule-venue {
@@ -305,22 +366,41 @@ body {
     @include tablet {
       width: 33.333;
     }
+    @include desktop {
+      width: 20px;
+    }
   }
   &__schedule-venue-name {
     font-size: 1rem;
     @include tablet {
+      width: 115px;
+      // margin-right: 9%;
+    }
+    @include desktop {
+      width: 70%;
     }
   }
   &__schedule-location {
     @extend .show__schedule-title;
     @include tablet {
     }
+    @include desktop {
+      width: 70%;
+    }
   }
   &__schedule-city {
     font-size: 1rem;
     @include tablet {
+      width: 130px;
+      // margin-right: 6%;
+    }
+    @include desktop {
+      width: 70%;
+      margin-right: 3%;
     }
   }
+
+  // FIXME: FIX THE BUTTON TEXT SIZE
   &__button {
     // margin: 0 16px 0 16px;
     background-color: $primary-cta;
@@ -334,6 +414,10 @@ body {
       height: 55%;
       margin: 0 0 0 0;
       padding: 0 0 0 0;
+    }
+    @include desktop {
+      width: 70%;
+      font-size: 0.8rem;
     }
   }
 }
@@ -358,7 +442,7 @@ body {
   }
   @include desktop {
     height: 50vh;
-    width: 100%;
+    width: 98.5%;
   }
   &__touch {
     margin: 40px 0 24px 0;

@@ -70,7 +70,7 @@ function makeShowHeader() {
   showLocation.classList.add("show__info-location");
   showInfo.appendChild(showLocation);
 
-  showDate.innerText = "DATE";
+  showDate.innerText = "DATES";
   showVenue.innerText = "VENUE";
   showLocation.innerText = "LOCATION";
 

@@ -351,8 +351,8 @@ body {
 @media screen and (min-width: 1200px) {
   .hero__title {
     margin: 224px 0 0 149px;
-    font-size: 3.3rem;
-    width: 45%;
+    font-size: 3rem;
+    width: 40%;
     font-weight: 900;
   }
 }
@@ -374,7 +374,7 @@ body {
 
 @media screen and (min-width: 1200px) {
   .hero__sound {
-    margin: 270px 0 0 606px;
+    margin: 270px 0 0 656px;
     width: 436px;
     height: 146px;
   }
@@ -384,41 +384,20 @@ body {
   margin: 0 24px 0 24px;
 }
 
+@media screen and (min-width: 768px) {
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .show__header {
-  height: 10%;
-}
-
-.show__info-date, .show__info-venue, .show__info-location {
-  display: none;
-  color: #afafaf;
-}
-
-@media screen and (min-width: 768px) {
-  .show__info-date, .show__info-venue, .show__info-location {
-    display: unset;
-    margin-right: 24%;
-  }
-}
-
-.show__info-venue {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .show__info-venue {
-    display: unset;
-    margin-right: 15%;
-  }
-}
-
-.show__info-location {
-  display: none;
-}
-
-@media screen and (min-width: 768px) {
-  .show__info-location {
-    display: unset;
-  }
+  height: 100%;
 }
 
 .show__title {
@@ -438,6 +417,46 @@ body {
   }
 }
 
+.show__info-date, .show__info-venue, .show__info-location {
+  display: none;
+  color: #afafaf;
+}
+
+@media screen and (min-width: 768px) {
+  .show__info-date, .show__info-venue, .show__info-location {
+    display: unset;
+    margin-right: 12%;
+  }
+}
+
+.show__info-venue {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .show__info-venue {
+    display: unset;
+    margin-left: 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__info-venue {
+    margin-left: 1%;
+  }
+}
+
+.show__info-location {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .show__info-location {
+    display: unset;
+    margin-left: 5%;
+  }
+}
+
 .show__schedule {
   height: 55vh;
   border-bottom: 1.5px solid #e1e1e1;
@@ -446,12 +465,31 @@ body {
 @media screen and (min-width: 768px) {
   .show__schedule {
     height: 11vw;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .show__schedule {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__schedule {
+    width: 704px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 8vw;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -469,9 +507,27 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .show__schedule-title, .show__schedule-venue, .show__schedule-location {
+    width: 70%;
+  }
+}
+
 .show__schedule-date {
   font-size: 1.1rem;
   font-weight: 600;
+}
+
+@media screen and (min-width: 768px) {
+  .show__schedule-date {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__schedule-date {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -480,12 +536,49 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .show__schedule-venue {
+    width: 20px;
+  }
+}
+
 .show__schedule-venue-name {
   font-size: 1rem;
 }
 
+@media screen and (min-width: 768px) {
+  .show__schedule-venue-name {
+    width: 115px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__schedule-venue-name {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__schedule-location {
+    width: 70%;
+  }
+}
+
 .show__schedule-city {
   font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .show__schedule-city {
+    width: 130px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__schedule-city {
+    width: 70%;
+    margin-right: 3%;
+  }
 }
 
 .show__button {
@@ -503,6 +596,13 @@ body {
     height: 55%;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .show__button {
+    width: 70%;
+    font-size: 0.8rem;
   }
 }
 
@@ -541,7 +641,7 @@ body {
 @media screen and (min-width: 1200px) {
   .footer {
     height: 50vh;
-    width: 100%;
+    width: 98.5%;
   }
 }
 
