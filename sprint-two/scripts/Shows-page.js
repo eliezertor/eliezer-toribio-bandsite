@@ -33,6 +33,8 @@ const show = [
   },
 ];
 
+// MAKES PARENT CONTAINER FOR
+
 function makeScheduleDiv() {
   const showParent = document.createElement("div");
   showParent.classList.add("show");
@@ -44,6 +46,8 @@ function makeScheduleDiv() {
 }
 
 makeScheduleDiv();
+
+// MAKES HEADER THAT HOLDS SHOW TITLE AND DATE, VENUE AND LOCATION
 
 function makeShowHeader() {
   const referenceParent = document.querySelector(".show");
@@ -77,43 +81,47 @@ function makeShowHeader() {
   loadShow();
 }
 
+// INVOKES MAKES SHOWS HEADER FUNCTION
 makeShowHeader();
 
+//  LOOPS OVER ARRAY TO DISPLAY EVENTS
 function loadShow(element) {
   show.forEach((element) => makeShowList(element));
 }
 
+// MAKES SHOWS SECTION
+
 function makeShowList(shows) {
   const show = document.querySelector(".show");
-  const ShowSchedule = document.createElement("div"); // Parent container for schedule
+  const ShowSchedule = document.createElement("div");
   ShowSchedule.classList.add("show__schedule");
   show.appendChild(ShowSchedule);
 
-  const showDateTitle = document.createElement("h4"); // Date heading
+  const showDateTitle = document.createElement("h4");
   showDateTitle.classList.add("show__schedule-title");
   ShowSchedule.appendChild(showDateTitle);
 
-  const showDate = document.createElement("p"); // Date
+  const showDate = document.createElement("p");
   showDate.classList.add("show__schedule-date");
   ShowSchedule.appendChild(showDate);
 
-  const showVenue = document.createElement("h4"); // Venue heading
+  const showVenue = document.createElement("h4");
   showVenue.classList.add("show__schedule-venue");
   ShowSchedule.appendChild(showVenue);
 
-  const showVenueName = document.createElement("p"); // Venue name
+  const showVenueName = document.createElement("p");
   showVenueName.classList.add("show__schedule-venue-name");
   ShowSchedule.appendChild(showVenueName);
 
-  const showLocation = document.createElement("h4"); // Location
+  const showLocation = document.createElement("h4");
   showLocation.classList.add("show__schedule-location");
   ShowSchedule.appendChild(showLocation);
 
-  const showCity = document.createElement("p"); // City
+  const showCity = document.createElement("p");
   showCity.classList.add("show__schedule-city");
   ShowSchedule.appendChild(showCity);
 
-  const showButton = document.createElement("Button"); // Button
+  const showButton = document.createElement("Button");
   showButton.classList.add("show__button");
   ShowSchedule.appendChild(showButton);
 

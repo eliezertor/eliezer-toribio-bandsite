@@ -21,7 +21,7 @@ const comments = [
   },
 ];
 
-// MAKES DATE
+// MAKES DATE DYNAMIC TO DATE OF UPLOADED COMMENT
 let currentDate = new Date();
 let formattedDate =
   currentDate.getMonth() +
@@ -31,7 +31,7 @@ let formattedDate =
   "/" +
   currentDate.getFullYear();
 
-// TAKES VALUE FROM FORM AND PUSHES INTO COMMENTS ARRAY
+// TAKES VALUE FROM FORM WHEN CALLED AND PUSHES INTO COMMENTS ARRAY
 const form = document.getElementById("form");
 
 form.onsubmit = (event) => {

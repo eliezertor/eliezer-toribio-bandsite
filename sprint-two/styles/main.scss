@@ -424,8 +424,6 @@ body {
 
 // // COMMENTS
 
-// // TODO: Make comments boxes smaller
-// // FIXME:
 .comments {
   display: flex;
   flex-direction: column;
@@ -488,7 +486,6 @@ body {
     @include desktop {
     }
   }
-  // FIXME: add color to name and comment label
 
   &__label-name {
     display: inline-block;
@@ -501,7 +498,6 @@ body {
       margin-right: 38%;
     }
   }
-  // FIXME: width and color of text
   &__name {
     background-color: $gallery-color;
     border-radius: 4px;
@@ -543,8 +539,6 @@ body {
   &__label-comment {
     @extend .comments__label-name;
   }
-  //   // FIXME: fix padding for textbox and width of hr line
-  //   // FIXME: fix color of comment box border
   &__comment {
     @extend .comments__name;
     height: 8em;
@@ -567,6 +561,7 @@ body {
     background-color: $primary-cta;
     width: 14em;
     height: 3em;
+    border: none;
     color: $text-color;
     font-size: 1em;
     border-radius: 5px;
