@@ -1,0 +1,609 @@
+@import "../styles/partials/fonts";
+@import "../styles/partials/variables";
+@import "../styles/partials/mixins";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Avenir", Sans-serif, Serif;
+}
+// START OF HEADER AND NAV
+
+// TODO: fix nav show underline
+.header {
+  background-color: $navigation-background;
+  height: 5.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+    }
+  }
+  &__nav-logo--link {
+    width: 2rem;
+    height: 12vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    @include tablet {
+      width: 20vw;
+      box-sizing: border-box;
+      display: inline-block;
+      display: flex;
+      align-items: center;
+      margin: 0 0 0 24px;
+    }
+    @include desktop {
+      margin: 0 4% 0 12.6%;
+      width: 10%;
+      height: 50%;
+    }
+  }
+  &__nav-logo-image {
+    width: 35vw;
+    height: auto;
+    box-sizing: border-box;
+    @include tablet {
+      width: 30vw;
+      height: 1.5rem;
+      box-sizing: border-box;
+    }
+    @include desktop {
+      width: 16vw;
+      height: 1.8rem;
+      box-sizing: border-box;
+    }
+  }
+  &__nav-options {
+    width: 100%;
+    height: 30px;
+    margin: 8px 0 0 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    @include tablet {
+      width: 68%;
+      height: 20%;
+      display: flex;
+      display: inline-block;
+      box-sizing: border-box;
+      margin: 0;
+    }
+    @include desktop {
+      width: 75%;
+    }
+  }
+  &__nav-list {
+    box-sizing: border-box;
+    height: auto;
+  }
+  &__nav-list--left {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    &:hover {
+      border-bottom: 5px solid $text-color;
+      font-weight: 600;
+    }
+    @include tablet {
+      width: 17%;
+      padding: 0 0 9% 1%;
+      margin: 0 10% 0 0;
+      height: 40%;
+      display: flex;
+      display: inline-block;
+      box-sizing: border-box;
+      font-size: 0.9rem;
+    }
+    @include desktop {
+      margin: 0;
+      width: 10%;
+      height: 10%;
+      padding: 0 0 5.1% 0.6%;
+      font-weight: 600;
+    }
+  }
+  &__nav-list--right {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    border-bottom: 5px solid $text-color;
+    &:hover {
+      border-bottom: 5px solid $text-color;
+    }
+    @include tablet {
+      width: 11%;
+      height: 40%;
+      padding: 0 0 9% 1%;
+      display: flex;
+      align-content: space-around;
+      align-items: center;
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    @include desktop {
+      margin: 0 0 0 5%;
+      width: 5.5%;
+      height: 10%;
+      padding: 0 0 4.5% 0.5%;
+      &:hover {
+        border-bottom: 5px solid $text-color;
+      }
+    }
+  }
+  &__nav-list-links {
+    text-decoration: none;
+    list-style: none;
+    line-height: 5px;
+    color: $text-color;
+    box-sizing: border-box;
+  }
+}
+// START OF HERO
+.hero {
+  width: 100%;
+  height: auto;
+  display: flex;
+  &__image {
+    background: linear-gradient(rgba(50, 50, 50, 0.2), rgba(50, 50, 50, 0.2)),
+      url("../Assets/Images/tolga-ahmetler-unsplash.jpg");
+    height: 472px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    @include tablet {
+      height: 670px;
+      background-size: cover;
+    }
+    @include desktop {
+      height: 46.5vw;
+      height: 670px;
+    }
+  }
+  &__album {
+    font-size: 1rem;
+    color: $text-color;
+    position: absolute;
+    margin: 64px 0 0 24px;
+    @include tablet {
+      margin: 96px 0 0 24px;
+      font-size: 1.6rem;
+    }
+    @include desktop {
+      margin: 160px 0 0 149px;
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    color: $text-color;
+    font-size: 2.2rem;
+    width: 89%;
+    line-height: 2.7rem;
+    margin: 100px 5% 64px 24px;
+    z-index: 1;
+    @include tablet {
+      margin: 22% 0 0 24px;
+      font-size: 3.8rem;
+      width: 75%;
+      height: 40%;
+      line-height: 4.5rem;
+      display: flex;
+      color: $text-color;
+      letter-spacing: 1px;
+    }
+    @include desktop {
+      margin: 224px 0 0 149px;
+      font-size: 3rem;
+      width: 40%;
+      font-weight: 900;
+    }
+  }
+  &__sound {
+    position: absolute;
+    margin: 320px 16px 0 24px;
+    height: 110px;
+    width: 85%;
+    @include tablet {
+      margin: 430px 16px 0 16px;
+      height: 150px;
+      width: 60%;
+    }
+    @include desktop {
+      margin: 270px 0 0 656px;
+      width: 436px;
+      height: 146px;
+    }
+  }
+}
+.show {
+  margin: 0 24px 0 24px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 15%;
+  }
+
+  &__header {
+    height: 100%;
+    @include desktop {
+      width: 71%;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+
+  &__info {
+    display: none;
+    @include tablet {
+      font-weight: 600;
+      color: $Text-label-style;
+      display: unset;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  &__info-date {
+    display: none;
+    color: $Text-label-style;
+    @include tablet {
+      display: unset;
+      margin-right: 12%;
+    }
+    @include desktop {
+    }
+  }
+  &__info-venue {
+    @extend .show__info-date;
+    display: none;
+    @include tablet {
+      display: unset;
+      margin-left: 10%;
+    }
+    @include desktop {
+      margin-left: 10%;
+    }
+  }
+  &__info-location {
+    display: none;
+    @extend .show__info-date;
+    @include tablet {
+      display: unset;
+    }
+    @include desktop {
+      margin-left: 3%;
+    }
+  }
+
+  &__schedule {
+    height: 320px;
+    border-bottom: 1.5px solid $Mercury;
+    @include tablet {
+      height: 11vw;
+      margin: 0;
+    }
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    @include desktop {
+      width: 704px;
+      display: flex;
+      height: 8vw;
+      align-items: center;
+    }
+  }
+  &__schedule-title {
+    font-weight: 600;
+    color: $Text-label-style;
+    margin: 6% 0 0 0;
+    @include tablet {
+      display: none;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  &__schedule-date {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 5% 0;
+    @include tablet {
+      width: 150px;
+    }
+    @include desktop {
+      width: 90%;
+    }
+  }
+  &__schedule-venue {
+    @extend .show__schedule-title;
+    @include tablet {
+      width: 33.333;
+    }
+    @include desktop {
+      width: 20px;
+    }
+  }
+  &__schedule-venue-name {
+    font-size: 1rem;
+    @include tablet {
+      width: 115px;
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  &__schedule-location {
+    @extend .show__schedule-title;
+    @include tablet {
+    }
+    @include desktop {
+      width: 70%;
+    }
+  }
+  &__schedule-city {
+    font-size: 1rem;
+    margin: 5% 0 9% 0;
+    @include tablet {
+      width: 130px;
+      margin: 0;
+    }
+    @include desktop {
+      width: 70%;
+      margin-right: 3%;
+    }
+  }
+
+  &__button {
+    background-color: $primary-cta;
+    width: 100%;
+    height: 19%;
+    border-radius: 4px;
+    color: $text-color;
+    font-size: 1rem;
+    border: none;
+    @include tablet {
+      width: 20%;
+      height: 55%;
+      margin: 0 0 0 0;
+      padding: 0 0 0 0;
+    }
+    @include desktop {
+      width: 70%;
+      font-size: 0.8rem;
+    }
+  }
+}
+//
+// START OF FOOTER
+.footer {
+  width: 95%;
+  background-color: $primary-cta;
+  color: $text-color;
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 0 16px;
+  font-size: 13px;
+  margin-top: 13%;
+  @include tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 98%;
+    height: 49.5vw;
+    align-content: flex-start;
+    margin-top: 6%;
+  }
+  @include desktop {
+    height: 50vh;
+    width: 98.5%;
+  }
+  &__touch {
+    margin: 40px 0 24px 0;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    padding: 0;
+    width: 90%;
+    font-weight: bold;
+    @include tablet {
+      width: 33%;
+      height: 10%;
+      font-size: 2.2rem;
+      margin: 40px 0 24px 12px;
+      letter-spacing: 1px;
+      color: $text-color;
+    }
+    @include desktop {
+      margin: 3.3% 0 0 11%;
+      width: 17%;
+      font-size: 2.4em;
+    }
+  }
+  &__social {
+    width: 50%;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 2%;
+    @include tablet {
+      align-items: center;
+      width: 24%;
+      height: 15%;
+      margin: 38px 0 0 0;
+    }
+    @include desktop {
+      height: 18%;
+      margin: 0;
+      width: 14%;
+      align-items: flex-end;
+    }
+  }
+  &__social-link {
+    width: 50px;
+    height: 50px;
+    background-repeat: no-repeat;
+    @include tablet {
+      width: 20px;
+      height: 20px;
+      background-size: 20px 20px;
+      color: $text-color;
+    }
+    @include desktop {
+      background-size: 95% 95%;
+    }
+  }
+  &__social-link--insta {
+    background-image: url("../Assets/Icons/SVG/Icon-instagram.svg");
+  }
+  &__social-link--face {
+    background-image: url("../Assets/Icons/SVG/Icon-facebook.svg");
+  }
+  &__social-link--twitter {
+    background-image: url("../Assets/Icons/SVG/Icon-twitter.svg");
+  }
+  &__social-logo {
+    width: 20%;
+    height: 50px;
+    @include mobile {
+      display: none;
+    }
+    @include tablet {
+      display: contents;
+    }
+  }
+  &__social-logo--image {
+    width: 50px;
+    height: 50px;
+    @include tablet {
+      width: 15%;
+      height: 18%;
+      margin: 34px 0 0 22.5%;
+      font-weight: bold;
+    }
+    @include desktop {
+      width: 8%;
+      height: 17%;
+      margin-left: 37%;
+    }
+  }
+  .management__top,
+  .management__middle,
+  .management__bottom {
+    margin: 0 0 10% 0;
+    @include tablet {
+      flex-direction: column;
+      width: 30%;
+      height: 55%;
+      display: flex;
+      align-self: flex-end;
+      justify-content: space-evenly;
+      margin: 25px 0 0 12px;
+    }
+    @include desktop {
+      height: 50%;
+      width: 17%;
+      margin: 1% 0 0 4%;
+    }
+  }
+  @include desktop {
+    .management__top {
+      margin-left: 11%;
+    }
+  }
+  &__management {
+    font-weight: 600;
+    width: 80%;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    @include tablet {
+      width: 100%;
+      height: 20%;
+      margin: 0 0 7% 0;
+      display: inline-block;
+      font-size: 1rem;
+      align-items: center;
+      padding: 0 0 0 0;
+    }
+  }
+  &__management-company {
+    width: 90%;
+    margin: 0 0 24px 0;
+    padding: 0;
+    @include tablet {
+      width: 100%;
+      height: 50%;
+      margin: 2% 0 0 0;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+  }
+  &__address {
+    width: 50%;
+    margin: 0 0 24px 0;
+    @include tablet {
+      width: 80%;
+      height: 20%;
+      margin: 0 0 5% 0;
+      display: inline-block;
+      font-size: 0.9rem;
+      line-height: 1.4rem;
+    }
+    @include desktop {
+      margin: 1% 0 0 0;
+      width: 85%;
+    }
+  }
+  &__email {
+    width: 60%;
+    height: auto;
+    margin: 0 0 13% 0;
+    text-decoration: none;
+    color: $text-color;
+    @include tablet {
+      width: 40%;
+      height: 20%;
+      margin: 0;
+      display: inline-block;
+      font-size: 0.9rem;
+    }
+    @include desktop {
+      margin: 4% 0 0 0;
+    }
+  }
+  &__copy-right {
+    margin: 0 0 40px 0;
+    width: 75%;
+    @include tablet {
+      width: 100%;
+      height: 10%;
+      margin: 0 0 0 12px;
+      font-size: 0.9rem;
+    }
+    @include desktop {
+      margin-left: 11%;
+    }
+  }
+}
