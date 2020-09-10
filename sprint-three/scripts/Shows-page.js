@@ -1,7 +1,5 @@
 // SHOWS PAGE
 
-const show = [];
-
 const urlShow =
   "https://project-1-api.herokuapp.com/showdates/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
 
@@ -16,13 +14,15 @@ axios
         location: JSON.stringify(item.location).replace(/"/g, ""),
       };
       show.push(showData);
-      loadShow();
     });
+    loadShow();
   })
   .catch((err) => {
     console.log(err);
     // console.log(showData);
   });
+
+const show = [];
 
 // MAKES PARENT CONTAINER FOR
 
