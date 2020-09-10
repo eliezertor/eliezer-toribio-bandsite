@@ -1,12 +1,15 @@
 // SHOWS PAGE
 
+const show = [];
+
 const urlShow =
   "https://project-1-api.herokuapp.com/showdates/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
 
-let showList = axios
+axios
   .get(urlShow)
   .then((res) => {
     res.data.forEach((item) => {
+      console.log(res);
       let showData = {
         date: JSON.stringify(item.date).replace(/"/g, ""),
         venue: JSON.stringify(item.place).replace(/"/g, ""),
@@ -18,9 +21,9 @@ let showList = axios
   })
   .catch((err) => {
     console.log(err);
+    // console.log(showData);
   });
 
-const show = [];
 // MAKES PARENT CONTAINER FOR
 
 function makeScheduleDiv() {
@@ -66,7 +69,7 @@ function makeShowHeader() {
   showVenue.innerText = "VENUE";
   showLocation.innerText = "LOCATION";
 
-  loadShow();
+  // loadShow();
 }
 
 // INVOKES MAKES SHOWS HEADER FUNCTION
