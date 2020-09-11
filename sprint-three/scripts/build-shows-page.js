@@ -1,13 +1,7 @@
 // BIO PAGE AND FORM
 
-// // 20200908065750
-// https://project-1-api.herokuapp.com/register
-
-// {
-//   "api_key": "c726f312-dedb-4aeb-83d4-cabd1a93db40"
-//
 const header = { headers: { "content-type": "application/json" } };
-let commenterID;
+// let commenterID; FIXME:
 const comments = [];
 
 const url =
@@ -15,41 +9,42 @@ const url =
 const deleteUrl =
   "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40&id=";
 
-// function getPost() {
-let bio = axios
-  .get(url)
-  .then((res) => {
-    res.data.forEach((item) => {
-      let currentDate = new Date(item.timestamp);
-      let formattedDate =
-        currentDate.getMonth() +
-        1 +
-        "/" +
-        currentDate.getDay() +
-        "/" +
-        currentDate.getFullYear();
+function displayComments() {
+  let bio = axios
+    .get(url)
+    .then((res) => {
+      res.data
+        .sort(function (x, y) {
+          return x.timestamp - y.timestamp;
+        })
+        .forEach((item) => {
+          let currentDate = new Date(item.timestamp);
+          let formattedDate =
+            currentDate.getMonth() +
+            1 +
+            "/" +
+            currentDate.getDay() +
+            "/" +
+            currentDate.getFullYear();
 
-      let newComment = {
-        name: item.name,
-        comment: item.comment,
-        date: formattedDate,
-      };
-      comments.push(newComment);
-      displayComments();
-      // makeParentDiv()
-      // resetSeparation();
+          let newComment = {
+            name: item.name,
+            comment: item.comment,
+            date: formattedDate,
+          };
+          comments.push(newComment);
+          loadComments();
+        });
+    })
+    .catch((err) => {
+      console.log(err);
     });
-  })
-  .catch((err) => {
-    console.log(err);
-  });
-// }
+}
 
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  // document.querySelector(".comments__separation").innerHTML = "";
   axios
     .post(
       url,
@@ -61,22 +56,30 @@ form.addEventListener("submit", (event) => {
     )
     .then(function (response) {
       console.log(response.data);
+      removeParent();
+      makeParentDiv();
     })
     .catch(function (error) {
       console.log(error.response.message);
     });
-
   document.querySelector(".comments__name").value = "";
   document.querySelector(".comments__comment").value = "";
-  displayComments();
-  // makeParentDiv()
-  // resetSeparation();
+  // removeParent();
 });
 
-function resetSeparation() {
-  // document.querySelector(".comments__return").innerHTML = "";
-  document.querySelector(".comments__separation").innerHTML = "";
+function removeParent() {
+  document.querySelector(".comments__return").innerHTML = "";
 }
+
+// const btn = document.querySelector(".comments__btn");
+
+// btn.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   document.querySelector(".comments__return").innerHTML = "";
+//   // document.querySelector(".comments__separation").innerHTML = "";
+//   // makeParentDiv();
+//   console.log(event);
+// });
 
 // axios
 //   .delete(
@@ -92,9 +95,6 @@ function resetSeparation() {
 //   .catch(function (error) {
 //     console.log(error.response);
 //   });
-
-// let name = document.querySelector(".comments__name").value;
-// console.log(name.value);
 
 // MAKES DATE DYNAMIC TO DATE OF UPLOADED COMMENT
 let currentDate = new Date();
@@ -117,7 +117,6 @@ function makeParentDiv() {
     referenceNode.nextElementSibling
   );
   displayComments();
-  // getPost();
 }
 
 // INVOKING
@@ -125,20 +124,10 @@ makeParentDiv();
 
 // LOOPS OVER COMMENTS ARRAY AND CLEARS COMMENT SECTION
 // TODO: .reverse() removed from forEach
-function displayComments() {
+function loadComments() {
   document.querySelector(".comments__return").innerHTML = "";
-  comments.forEach((element) => makeSection(element));
+  comments.reverse().forEach((element) => makeSection(element));
 }
-
-// const sortedDate = comments.sort((a, b) => b.date - a.date);
-// console.log(sortedDate);
-
-// FIXME: remove if this doesnt work
-// const sorted = comments.sort(function (a, b) {
-//   let dateA = new Date(a.date);
-//   let dateB = new Date(b.date);
-//   return dataA - dataB;
-// });
 
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER
 function makeSection(comment) {
@@ -167,43 +156,3 @@ function makeSection(comment) {
   date.innerText = comment.date;
   commenterPara.innerText = comment.comment;
 }
-
-// const form = document.getElementById("form");
-
-// form.addEventListener(
-//   "submit",
-//   (displayComments = () => {
-//     event.preventDefault();
-//     const name = event.target.name.value;
-//     const comment = event.target.comment.value;
-//     FormData = {
-//       name: name,
-//       comment: comment,
-//       // date: formattedDate,
-//     };
-//     // const newComment = {
-//     //   name: name,
-//     //   comment: comment,
-//     //   date: formattedDate,
-//     // };
-//     comments.push(FormData);
-//     document.querySelector(".comments__name").value = "";
-//     document.querySelector(".comments__comment").value = "";
-//     displayComments();
-//   })
-// );
-
-// form.onsubmit = (event) => {
-//   event.preventDefault();
-//   const name = event.target.name.value;
-//   const comment = event.target.comment.value;
-//   const newComment = {
-//     name: name,
-//     comment: comment,
-//     date: formattedDate,
-//   };
-//   comments.push(newComment);
-//   document.querySelector(".comments__name").value = "";
-//   document.querySelector(".comments__comment").value = "";
-//   displayComments();
-// };
