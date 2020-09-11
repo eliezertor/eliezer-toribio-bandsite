@@ -7,7 +7,7 @@ axios
   .get(urlShow)
   .then((res) => {
     res.data.forEach((item) => {
-      console.log(res);
+      // console.log(res); TODO:
       let showData = {
         date: JSON.stringify(item.date).replace(/"/g, ""),
         venue: JSON.stringify(item.place).replace(/"/g, ""),

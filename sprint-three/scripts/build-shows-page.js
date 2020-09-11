@@ -1,25 +1,26 @@
 // BIO PAGE AND FORM
 
-// const axios = require("axios");
-
 // // 20200908065750
 // https://project-1-api.herokuapp.com/register
 
 // {
 //   "api_key": "c726f312-dedb-4aeb-83d4-cabd1a93db40"
-// }
+//
+const header = { headers: { "content-type": "application/json" } };
+let commenterID;
+const comments = [];
 
 const url =
   "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
+const deleteUrl =
+  "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40&id=";
 
+// function getPost() {
 let bio = axios
   .get(url)
   .then((res) => {
-    res.data.reverse().forEach((item) => {
-      let currentDate = new Date(
-        parseFloat(JSON.stringify(item.timestamp).replace(/"/g, "").substr(3))
-      );
-      // console.log(currentDate);
+    res.data.forEach((item) => {
+      let currentDate = new Date(item.timestamp);
       let formattedDate =
         currentDate.getMonth() +
         1 +
@@ -29,53 +30,71 @@ let bio = axios
         currentDate.getFullYear();
 
       let newComment = {
-        name: JSON.stringify(item.name).replace(/"/g, ""),
-        comment: JSON.stringify(item.comment).replace(/"/g, ""),
+        name: item.name,
+        comment: item.comment,
         date: formattedDate,
       };
       comments.push(newComment);
-      // console.log(res);
       displayComments();
+      // makeParentDiv()
+      // resetSeparation();
     });
   })
   .catch((err) => {
     console.log(err);
   });
-
-const comments = [];
+// }
 
 const form = document.getElementById("form");
 
-// console.log(FormData);
-
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  // axios
-  //   .post(url, {
-  //     name: form.name.value,
-  //     comment: form.comment.value,
-  //   })
-  //   .then(function (response) {
-  //     console.log(response);
-  //   })
-  //   .catch(function (error) {
-  //     console.log("Error", error.message);
-  //   });
+  // document.querySelector(".comments__separation").innerHTML = "";
+  axios
+    .post(
+      url,
+      {
+        name: form.name.value,
+        comment: form.comment.value,
+      },
+      header
+    )
+    .then(function (response) {
+      console.log(response.data);
+    })
+    .catch(function (error) {
+      console.log(error.response.message);
+    });
+
+  document.querySelector(".comments__name").value = "";
+  document.querySelector(".comments__comment").value = "";
+  displayComments();
+  // makeParentDiv()
+  // resetSeparation();
 });
 
-let name = document.getElementById("form").name.value;
-console.log(name);
+function resetSeparation() {
+  // document.querySelector(".comments__return").innerHTML = "";
+  document.querySelector(".comments__separation").innerHTML = "";
+}
 
-// function wordCount() {
-//   let nameSubmit = document.querySelector("form");
-//   nameSubmit.innerHTML = "";
-//   if (document.getElementsByClassName("name").form.value.length < 2) {
-//     nameSubmit.innerHTML = "PLEASE ENTER NAME";
-//     return false;
-//   } else {
-//     document.getElementById("form").submit();
-//   }
-// }
+// axios
+//   .delete(
+//     deleteUrl,
+//     {
+//       params: { id: "d1abafa9-82a6-4eb7-907e-2dc12f5e0efb" },
+//     }
+//     // { headers: { "Content-type": "application/json" } }
+//   )
+//   .then(function (response) {
+//     console.log(response.data);
+//   })
+//   .catch(function (error) {
+//     console.log(error.response);
+//   });
+
+// let name = document.querySelector(".comments__name").value;
+// console.log(name.value);
 
 // MAKES DATE DYNAMIC TO DATE OF UPLOADED COMMENT
 let currentDate = new Date();
@@ -98,16 +117,28 @@ function makeParentDiv() {
     referenceNode.nextElementSibling
   );
   displayComments();
+  // getPost();
 }
 
 // INVOKING
 makeParentDiv();
 
 // LOOPS OVER COMMENTS ARRAY AND CLEARS COMMENT SECTION
+// TODO: .reverse() removed from forEach
 function displayComments() {
   document.querySelector(".comments__return").innerHTML = "";
   comments.forEach((element) => makeSection(element));
 }
+
+// const sortedDate = comments.sort((a, b) => b.date - a.date);
+// console.log(sortedDate);
+
+// FIXME: remove if this doesnt work
+// const sorted = comments.sort(function (a, b) {
+//   let dateA = new Date(a.date);
+//   let dateB = new Date(b.date);
+//   return dataA - dataB;
+// });
 
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER
 function makeSection(comment) {
