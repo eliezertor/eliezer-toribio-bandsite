@@ -45,23 +45,76 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  axios
-    .post(
-      url,
-      {
-        name: form.name.value,
-        comment: form.comment.value,
-      },
-      header
-    )
-    .then(function (response) {
-      console.log(response.data);
-      removeParent();
-      makeParentDiv();
-    })
-    .catch(function (error) {
-      console.log(error.response.message);
-    });
+  // axios
+  //   .post(
+  //     url,
+  //     {
+  //       name: form.name.value,
+  //       comment: form.comment.value,
+  //     },
+  //     header
+  //   )
+  //   .then(function (response) {
+  //     console.log(response.data);
+  //     removeParent();
+  //     makeParentDiv();
+  //   })
+  //   .catch(function (error) {
+  //     console.log(error.response.message);
+  //   });
+  // let formName = (document.querySelector(".comments__name").value = "");
+  // let formComment = (document.querySelector(".comments__comment").value = "");
+
+  if (form.name.value === "" && form.comment.value === "") {
+    console.log(
+      "Please enter your name and a comment so we know you support us."
+    );
+    form.name.style.backgroundColor = "#fec7c7";
+    form.name.placeholder = "Don't forget your name";
+    form.comment.backgroundColor = "#fec7c7";
+    form.comment.placeholder = "Let us know what you think";
+    setTimeout(() => {
+      form.name.style.backgroundColor = "#fafafa";
+      form.name.placeholder = "Mohan Muruge";
+      form.comment.backgroundColor = "#fafafa";
+      form.comment.placeholder = "Add a new comment";
+    }, 4000);
+  } else if (form.name.value === "") {
+    form.name.style.backgroundColor = "#fec7c7";
+    form.name.placeholder = "Don't forget your name";
+    setTimeout(() => {
+      form.name.style.backgroundColor = "#fafafa";
+      form.name.placeholder = "Mohan Muruge";
+    }, 4000);
+    console.log("Hi my name is Mohan and you are ?");
+  } else if (form.comment.value === "") {
+    form.comment.backgroundColor = "#fec7c7";
+    form.comment.placeholder = "Let us know what you think";
+    setTimeout(() => {
+      form.comment.backgroundColor = "#fafafa";
+      form.comment.placeholder = "Add a new comment";
+    }, 4000);
+    console.log("Please leave us a comment. WE love feedback.");
+  } else {
+    axios
+      .post(
+        url,
+        {
+          name: form.name.value,
+          comment: form.comment.value,
+        },
+        header
+      )
+      .then(function (response) {
+        console.log(response.data);
+        removeParent();
+        makeParentDiv();
+      })
+      .catch(function (error) {
+        console.log(error.response.message);
+      });
+  }
+
   document.querySelector(".comments__name").value = "";
   document.querySelector(".comments__comment").value = "";
   // removeParent();
@@ -70,16 +123,6 @@ form.addEventListener("submit", (event) => {
 function removeParent() {
   document.querySelector(".comments__return").innerHTML = "";
 }
-
-// const btn = document.querySelector(".comments__btn");
-
-// btn.addEventListener("click", (event) => {
-//   event.preventDefault();
-//   document.querySelector(".comments__return").innerHTML = "";
-//   // document.querySelector(".comments__separation").innerHTML = "";
-//   // makeParentDiv();
-//   console.log(event);
-// });
 
 // axios
 //   .delete(
