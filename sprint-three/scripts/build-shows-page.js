@@ -46,7 +46,7 @@ const form = document.getElementById("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // FIXME: DONT NEED THIS ANYMORE HAVE IT DOWN BELOW
+  // FIXME: DONT NEED THIS ANYMORE HAVE IT DOWN
   // axios
   //   .post(
   //     url,

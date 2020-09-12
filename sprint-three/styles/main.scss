@@ -26,7 +26,7 @@ body {
       flex-direction: row;
     }
   }
-  &__nav-logo--link {
+  &__nav-logo-link {
     width: 2rem;
     height: 12vw;
     display: flex;
@@ -97,8 +97,8 @@ body {
       font-weight: 600;
     }
     @include tablet {
-      width: 17%;
-      padding: 0 0 9% 1%;
+      max-width: 93px;
+      padding: 0 0 45.5px 11px;
       margin: 0 10% 0 0;
       height: 40%;
       display: flex;
@@ -210,7 +210,7 @@ body {
   align-items: center;
   font-size: 1.5rem;
   font-weight: bold;
-  margin: 10% 5% 9% 6%;
+  margin: 10% 5% 6% 6%;
   @include tablet {
     font-size: 2.3rem;
     margin: 48px 0 32px 24px;
@@ -322,7 +322,7 @@ body {
       height: 70%;
     }
   }
-  &__content--top {
+  &__content-top {
     @include tablet {
       margin: 0 3%;
     }
@@ -331,7 +331,7 @@ body {
       margin-right: 0;
     }
   }
-  &__content--bottom {
+  &__content-bottom {
     margin: 9% 5% 13% 5%;
     @include tablet {
       margin: 0 24px 0 0;
@@ -355,22 +355,19 @@ body {
     padding-bottom: 2%;
   }
   &__title {
+    background-color: $gallery-color;
     font-size: 1.5rem;
     font-weight: bold;
-    margin: 10% 40% 4% 0;
+    // margin: 10% 40% 4% 0;
+    padding: 10% 40% 3% 5%;
+    // width: 55vw;
     @include tablet {
-      width: 100%;
       font-size: 2.4rem;
-      margin-left: 4%;
-      display: flex;
-      margin: 5% 3.5%;
+      padding: 5% 40% 5% 3%;
     }
     @include desktop {
-      margin: 0 0 0 2%;
-      width: 78%;
-      height: 126px;
+      padding: 3% 40% 2% 11.5%;
       font-size: 2rem;
-      align-items: center;
     }
   }
   &__img {
@@ -394,33 +391,6 @@ body {
       }
     }
   }
-  &__img-top-left {
-    background-image: url("../Assets/Images/Photo-gallery-1.jpg");
-  }
-  &__img-top-center {
-    background-image: url("../Assets/Images/Photo-gallery-2.jpg");
-  }
-  &__img-top-right {
-    background-image: url("../Assets/Images/Photo-gallery-3.jpg");
-  }
-  &__img-middle-left {
-    background-image: url("../Assets/Images/Photo-gallery-4.jpg");
-  }
-  &__img-middle-center {
-    background-image: url("../Assets/Images/Photo-gallery-5.jpg");
-  }
-  &__img-middle-right {
-    background-image: url("../Assets/Images/Photo-gallery-6.jpg");
-  }
-  &__img-bottom-left {
-    background-image: url("../Assets/Images/Photo-gallery-7.jpg");
-  }
-  &__img-bottom-center {
-    background-image: url("../Assets/Images/Photo-gallery-8.jpg");
-  }
-  &__img-bottom-right {
-    background-image: url("../Assets/Images/Photo-gallery-9.jpg");
-  }
 }
 
 // // COMMENTS
@@ -442,7 +412,7 @@ body {
   &__title {
     align-content: flex-start;
     font-weight: 900;
-    width: 50%;
+    // width: 57%;
     justify-self: flex-start;
     color: $primary-cta;
     margin-left: 20px;
@@ -495,6 +465,9 @@ body {
     font-weight: 600;
     margin-right: 57%;
     color: $Text-label-style;
+    @include tablet {
+      margin-right: 69%;
+    }
     @include desktop {
       margin-right: 38%;
     }
@@ -529,7 +502,7 @@ body {
     }
     @include tablet {
       height: 5vw;
-      padding: 1% 0 0 2%;
+      padding: 1.7% 0 0 2%;
       width: 90%;
     }
     @include desktop {
@@ -556,6 +529,9 @@ body {
     &:hover {
       border: 1px solid black;
     }
+    @include tablet {
+      padding: 1% 0 0 1%;
+    }
   }
   &__btn {
     display: block;
@@ -571,7 +547,7 @@ body {
       width: 11em;
     }
     @include desktop {
-      margin-left: 38%;
+      margin: 0 0 2% 38%;
     }
   }
 
@@ -588,15 +564,18 @@ body {
       margin: auto;
     }
     @include desktop {
-      width: 50%;
+      width: 49%;
+      // padding-right: 4%;
     }
   }
   &__separation {
     border-top: 2px solid $Mercury;
     position: relative;
-    width: 100%;
     flex-flow: wrap;
     margin: 0;
+    @include desktop {
+      width: 96%;
+    }
   }
   &__separation:last-child {
     border-bottom: 2px solid $Mercury;
@@ -605,7 +584,6 @@ body {
   }
 
   &__commenter-name {
-    display: block;
     width: 49%;
     height: 10%;
     font-size: 0.9rem;
@@ -614,6 +592,9 @@ body {
     @include tablet {
       margin: 3% 0 2% 13%;
       width: 23%;
+    }
+    @include desktop {
+      margin: 3% 0 2% 12%;
     }
   }
   &__picture {
@@ -626,6 +607,9 @@ body {
     position: absolute;
     @include tablet {
       margin: 1em 0 0 1em;
+    }
+    @include desktop {
+      margin: 3% 0 0 2%;
     }
   }
   &__date {
@@ -645,6 +629,11 @@ body {
     margin: 0 0 5% 20%;
     @include tablet {
       margin: 0 0 5% 13%;
+      width: 88%;
+    }
+    @include desktop {
+      width: 85%;
+      margin: 0 0 5% 12%;
     }
   }
 }
@@ -725,13 +714,13 @@ body {
       background-size: 95% 95%;
     }
   }
-  &__social-link--insta {
+  &__social-link-insta {
     background-image: url("../Assets/Icons/SVG/Icon-instagram.svg");
   }
-  &__social-link--face {
+  &__social-link-face {
     background-image: url("../Assets/Icons/SVG/Icon-facebook.svg");
   }
-  &__social-link--twitter {
+  &__social-link-twitter {
     background-image: url("../Assets/Icons/SVG/Icon-twitter.svg");
   }
   &__social-logo {
@@ -744,7 +733,7 @@ body {
       display: contents;
     }
   }
-  &__social-logo--image {
+  &__social-logo-image {
     width: 50px;
     height: 50px;
     @include tablet {

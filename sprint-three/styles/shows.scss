@@ -28,7 +28,7 @@ body {
       flex-direction: row;
     }
   }
-  &__nav-logo--link {
+  &__nav-logo-link {
     width: 2rem;
     height: 12vw;
     display: flex;
@@ -87,7 +87,7 @@ body {
     box-sizing: border-box;
     height: auto;
   }
-  &__nav-list--left {
+  &__nav-list-left {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -115,7 +115,7 @@ body {
       font-weight: 600;
     }
   }
-  &__nav-list--right {
+  &__nav-list-right {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -125,9 +125,9 @@ body {
       border-bottom: 5px solid $text-color;
     }
     @include tablet {
-      width: 11%;
+      width: 60px;
       height: 40%;
-      padding: 0 0 9% 1%;
+      padding: 0 0 45.5px 5px;
       display: flex;
       align-content: space-around;
       align-items: center;
@@ -136,9 +136,6 @@ body {
     }
     @include desktop {
       margin: 0 0 0 5%;
-      width: 5.5%;
-      height: 10%;
-      padding: 0 0 4.5% 0.5%;
       &:hover {
         border-bottom: 5px solid $text-color;
       }
@@ -474,13 +471,13 @@ body {
       background-size: 95% 95%;
     }
   }
-  &__social-link--insta {
+  &__social-link-insta {
     background-image: url("../Assets/Icons/SVG/Icon-instagram.svg");
   }
-  &__social-link--face {
+  &__social-link-face {
     background-image: url("../Assets/Icons/SVG/Icon-facebook.svg");
   }
-  &__social-link--twitter {
+  &__social-link-twitter {
     background-image: url("../Assets/Icons/SVG/Icon-twitter.svg");
   }
   &__social-logo {
@@ -493,7 +490,7 @@ body {
       display: contents;
     }
   }
-  &__social-logo--image {
+  &__social-logo-image {
     width: 50px;
     height: 50px;
     @include tablet {
