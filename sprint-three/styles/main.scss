@@ -85,7 +85,7 @@ body {
     box-sizing: border-box;
     height: auto;
   }
-  &__nav-list--left {
+  &__nav-list-left {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -116,7 +116,7 @@ body {
       font-weight: 600;
     }
   }
-  &__nav-list--right {
+  &__nav-list-right {
     width: 50%;
     display: flex;
     justify-content: space-evenly;
@@ -152,6 +152,7 @@ body {
     box-sizing: border-box;
   }
 }
+
 // START OF HERO
 .hero {
   width: 100%;
@@ -219,7 +220,7 @@ body {
     margin: 3.4% 0 3.4% 12.6%;
   }
 }
-.title--the {
+.title-the {
   @include tablet {
     text-transform: lowercase;
   }
@@ -393,31 +394,31 @@ body {
       }
     }
   }
-  &__img--top-left {
+  &__img-top-left {
     background-image: url("../Assets/Images/Photo-gallery-1.jpg");
   }
-  &__img--top-center {
+  &__img-top-center {
     background-image: url("../Assets/Images/Photo-gallery-2.jpg");
   }
-  &__img--top-right {
+  &__img-top-right {
     background-image: url("../Assets/Images/Photo-gallery-3.jpg");
   }
-  &__img--middle-left {
+  &__img-middle-left {
     background-image: url("../Assets/Images/Photo-gallery-4.jpg");
   }
-  &__img--middle-center {
+  &__img-middle-center {
     background-image: url("../Assets/Images/Photo-gallery-5.jpg");
   }
-  &__img--middle-right {
+  &__img-middle-right {
     background-image: url("../Assets/Images/Photo-gallery-6.jpg");
   }
-  &__img--bottom-left {
+  &__img-bottom-left {
     background-image: url("../Assets/Images/Photo-gallery-7.jpg");
   }
-  &__img--bottom-center {
+  &__img-bottom-center {
     background-image: url("../Assets/Images/Photo-gallery-8.jpg");
   }
-  &__img--bottom-right {
+  &__img-bottom-right {
     background-image: url("../Assets/Images/Photo-gallery-9.jpg");
   }
 }

@@ -150,7 +150,7 @@ body {
           box-sizing: border-box;
   height: auto;
 }
-.header__nav-list--left {
+.header__nav-list-left {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -163,12 +163,12 @@ body {
   border-bottom: 5px solid #ffffff;
   scroll-behavior: smooth;
 }
-.header__nav-list--left:hover {
+.header__nav-list-left:hover {
   border-bottom: 5px solid #ffffff;
   font-weight: 600;
 }
 @media screen and (min-width: 768px) {
-  .header__nav-list--left {
+  .header__nav-list-left {
     width: 17%;
     padding: 0 0 9% 1%;
     margin: 0 10% 0 0;
@@ -184,7 +184,7 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__nav-list--left {
+  .header__nav-list-left {
     margin: 0;
     width: 10%;
     height: 10%;
@@ -193,7 +193,7 @@ body {
     font-weight: 600;
   }
 }
-.header__nav-list--right {
+.header__nav-list-right {
   width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -204,11 +204,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
-.header__nav-list--right:hover {
+.header__nav-list-right:hover {
   border-bottom: 5px solid #ffffff;
 }
 @media screen and (min-width: 768px) {
-  .header__nav-list--right {
+  .header__nav-list-right {
     width: 11%;
     height: 40%;
     padding: 0 0 9% 1%;
@@ -226,13 +226,13 @@ body {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__nav-list--right {
+  .header__nav-list-right {
     margin: 0 0 0 5%;
     width: 5.5%;
     height: 10%;
     padding: 0 0 4.5% 0.5%;
   }
-  .header__nav-list--right:hover {
+  .header__nav-list-right:hover {
     border-bottom: 5px solid #ffffff;
   }
 }
@@ -336,12 +336,12 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .title--the {
+  .title-the {
     text-transform: lowercase;
   }
 }
 @media screen and (min-width: 1200px) {
-  .title--the {
+  .title-the {
     text-transform: lowercase;
   }
 }
@@ -579,31 +579,31 @@ body {
     opacity: 1;
   }
 }
-.gallery__img--top-left {
+.gallery__img-top-left {
   background-image: url("../Assets/Images/Photo-gallery-1.jpg");
 }
-.gallery__img--top-center {
+.gallery__img-top-center {
   background-image: url("../Assets/Images/Photo-gallery-2.jpg");
 }
-.gallery__img--top-right {
+.gallery__img-top-right {
   background-image: url("../Assets/Images/Photo-gallery-3.jpg");
 }
-.gallery__img--middle-left {
+.gallery__img-middle-left {
   background-image: url("../Assets/Images/Photo-gallery-4.jpg");
 }
-.gallery__img--middle-center {
+.gallery__img-middle-center {
   background-image: url("../Assets/Images/Photo-gallery-5.jpg");
 }
-.gallery__img--middle-right {
+.gallery__img-middle-right {
   background-image: url("../Assets/Images/Photo-gallery-6.jpg");
 }
-.gallery__img--bottom-left {
+.gallery__img-bottom-left {
   background-image: url("../Assets/Images/Photo-gallery-7.jpg");
 }
-.gallery__img--bottom-center {
+.gallery__img-bottom-center {
   background-image: url("../Assets/Images/Photo-gallery-8.jpg");
 }
-.gallery__img--bottom-right {
+.gallery__img-bottom-right {
   background-image: url("../Assets/Images/Photo-gallery-9.jpg");
 }
 
