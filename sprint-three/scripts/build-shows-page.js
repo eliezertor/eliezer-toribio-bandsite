@@ -45,6 +45,8 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  // FIXME: DONT NEED THIS ANYMORE HAVE IT DOWN BELOW
   // axios
   //   .post(
   //     url,
@@ -71,12 +73,12 @@ form.addEventListener("submit", (event) => {
     );
     form.name.style.backgroundColor = "#fec7c7";
     form.name.placeholder = "Don't forget your name";
-    form.comment.backgroundColor = "#fec7c7";
+    form.comment.style.backgroundColor = "#fec7c7";
     form.comment.placeholder = "Let us know what you think";
     setTimeout(() => {
       form.name.style.backgroundColor = "#fafafa";
       form.name.placeholder = "Mohan Muruge";
-      form.comment.backgroundColor = "#fafafa";
+      form.comment.style.backgroundColor = "#fafafa";
       form.comment.placeholder = "Add a new comment";
     }, 4000);
   } else if (form.name.value === "") {
@@ -88,10 +90,10 @@ form.addEventListener("submit", (event) => {
     }, 4000);
     console.log("Hi my name is Mohan and you are ?");
   } else if (form.comment.value === "") {
-    form.comment.backgroundColor = "#fec7c7";
+    form.comment.style.backgroundColor = "#fec7c7";
     form.comment.placeholder = "Let us know what you think";
     setTimeout(() => {
-      form.comment.backgroundColor = "#fafafa";
+      form.comment.style.backgroundColor = "#fafafa";
       form.comment.placeholder = "Add a new comment";
     }, 4000);
     console.log("Please leave us a comment. WE love feedback.");
