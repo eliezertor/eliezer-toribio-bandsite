@@ -207,9 +207,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__nav-list-right {
-    width: 60px;
+    width: 80px;
     height: 40%;
-    padding: 0 0 45.5px 5px;
+    padding: 0 0 45.5px 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -293,15 +293,14 @@ body {
   font-size: 2.2rem;
   width: 89%;
   line-height: 2.7rem;
-  margin: 100px 5% 64px 24px;
+  margin: 100px 24px 64px 24px;
   z-index: 1;
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    margin: 22% 0 0 24px;
+    margin: 150px 0 0 24px;
     font-size: 3.8rem;
     width: 75%;
-    height: 40%;
     line-height: 4.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -322,13 +321,13 @@ body {
   position: absolute;
   margin: 320px 16px 0 24px;
   height: 110px;
-  width: 85%;
+  max-width: 85%;
 }
 @media screen and (min-width: 768px) {
   .hero__sound {
     margin: 430px 16px 0 16px;
     height: 150px;
-    width: 60%;
+    width: 58%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -340,48 +339,95 @@ body {
 }
 
 .show {
-  margin: 0 24px 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 5vw 0 5vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 @media screen and (min-width: 768px) {
   .show {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    margin-right: 15%;
   }
 }
-.show__header {
-  height: 100%;
+@media screen and (min-width: 1200px) {
+  .show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+    display: inline-block;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .show__header {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 90vw;
+  }
 }
 @media screen and (min-width: 1200px) {
   .show__header {
-    width: 71%;
+    width: 10vw;
+    height: 5vw;
+    margin: 0;
+    display: inline-block;
   }
 }
 .show__title {
   font-size: 2rem;
   font-weight: 900;
 }
+@media screen and (min-width: 768px) {
+  .show__title {
+    width: 50vw;
+    font-size: 2.5rem;
+    padding-top: 1em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .show__title {
+    width: 10vw;
+    padding: 0 0 0 0;
+    margin: 0;
+  }
+}
 .show__info {
   display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 @media screen and (min-width: 768px) {
   .show__info {
     font-weight: 600;
     color: #afafaf;
     display: unset;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
 }
 @media screen and (min-width: 1200px) {
   .show__info {
-    width: 70%;
+    width: 68vw;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+    display: inline-block;
+    height: 5vw;
   }
 }
 .show__info-date, .show__info-location, .show__info-venue {
@@ -391,7 +437,8 @@ body {
 @media screen and (min-width: 768px) {
   .show__info-date, .show__info-location, .show__info-venue {
     display: unset;
-    margin-right: 12%;
+    margin-right: 15vw;
+    font-size: 0.9rem;
   }
 }
 .show__info-venue {
@@ -400,7 +447,6 @@ body {
 @media screen and (min-width: 768px) {
   .show__info-venue {
     display: unset;
-    margin-left: 10%;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -414,6 +460,7 @@ body {
 @media screen and (min-width: 768px) {
   .show__info-location {
     display: unset;
+    margin-left: 7vw;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -421,8 +468,10 @@ body {
     margin-left: 3%;
   }
 }
+.show__info__empty {
+  display: none;
+}
 .show__schedule {
-  height: 320px;
   border-bottom: 1.5px solid #e1e1e1;
 }
 @media screen and (min-width: 768px) {
@@ -442,18 +491,17 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
   .show__schedule {
-    width: 704px;
+    width: 754px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     height: 8vw;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    margin: 0;
   }
 }
 .show__schedule-title, .show__schedule-location, .show__schedule-venue {
@@ -475,20 +523,16 @@ body {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 5% 0;
+  text-transform: capitalize;
 }
 @media screen and (min-width: 768px) {
   .show__schedule-date {
-    width: 150px;
+    width: 105px;
   }
 }
 @media screen and (min-width: 1200px) {
   .show__schedule-date {
     width: 90%;
-  }
-}
-@media screen and (min-width: 768px) {
-  .show__schedule-venue {
-    width: 33.333;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -501,7 +545,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .show__schedule-venue-name {
-    width: 115px;
+    width: 165px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -520,7 +564,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .show__schedule-city {
-    width: 130px;
+    width: 120px;
     margin: 0;
   }
 }
@@ -532,8 +576,9 @@ body {
 }
 .show__button {
   background-color: #323232;
-  width: 100%;
-  height: 19%;
+  width: 18rem;
+  padding: 1.4rem;
+  margin-bottom: 6%;
   border-radius: 4px;
   color: #ffffff;
   font-size: 1rem;
@@ -543,6 +588,7 @@ body {
   .show__button {
     width: 20%;
     height: 55%;
+    font-size: 0.8rem;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
   }
@@ -838,7 +884,7 @@ body {
     margin-left: 11%;
   }
 }
-/*# sourceMappingURL=shows.css.map */en and (min-width: 1200px) {
+/*# sourceMappingURL=shows.css.map */creen and (min-width: 1200px) {
   .footer__copy-right {
     margin-left: 11%;
   }

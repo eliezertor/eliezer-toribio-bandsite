@@ -51,29 +51,76 @@ function makeShowHeader() {
   showHeader.appendChild(showTitle);
   showTitle.innerHTML = "Shows";
 
+  loadShow();
+}
+
+makeShowHeader();
+
+function makeShowHolder() {
+  const referenceParent = document.querySelector(".show");
+  const showHolder = document.createElement("div");
+  showHolder.classList.add("show__holder");
+  referenceParent.appendChild(showHolder);
+
+  const referenceHolder = document.querySelector(".show__holder");
+
   const showInfo = document.createElement("div");
   showInfo.classList.add("show__info");
-  showHeader.appendChild(showInfo);
+  referenceHolder.appendChild(showInfo);
 
   const showDate = document.createElement("p");
   showDate.classList.add("show__info-date");
   showInfo.appendChild(showDate);
+
   const showVenue = document.createElement("p");
   showVenue.classList.add("show__info-venue");
   showInfo.appendChild(showVenue);
+
   const showLocation = document.createElement("p");
   showLocation.classList.add("show__info-location");
   showInfo.appendChild(showLocation);
 
+  const emptyInfo = document.createElement("p");
+  emptyInfo.classList.add("show__info__empty");
+  showInfo.appendChild(emptyInfo);
+
   showDate.innerText = "DATES";
   showVenue.innerText = "VENUE";
   showLocation.innerText = "LOCATION";
-
-  // loadShow();
 }
+makeShowHolder();
 
 // INVOKES MAKES SHOWS HEADER FUNCTION
-makeShowHeader();
+
+// function makeShowInfo() {
+//   const referenceHolder = document.querySelector(".show__holder");
+
+//   const showInfo = document.createElement("div");
+//   showInfo.classList.add("show__info");
+//   referenceParent.appendChild(showInfo);
+
+//   const showDate = document.createElement("p");
+//   showDate.classList.add("show__info-date");
+//   showInfo.appendChild(showDate);
+
+//   const showVenue = document.createElement("p");
+//   showVenue.classList.add("show__info-venue");
+//   showInfo.appendChild(showVenue);
+
+//   const showLocation = document.createElement("p");
+//   showLocation.classList.add("show__info-location");
+//   showInfo.appendChild(showLocation);
+
+//   const emptyInfo = document.createElement("p");
+//   emptyInfo.classList.add("show__info__empty");
+//   showInfo.appendChild(emptyInfo);
+
+//   showDate.innerText = "DATES";
+//   showVenue.innerText = "VENUE";
+//   showLocation.innerText = "LOCATION";
+// }
+
+// makeShowInfo();
 
 //  LOOPS OVER ARRAY TO DISPLAY EVENTS
 function loadShow(element) {
@@ -83,10 +130,11 @@ function loadShow(element) {
 // MAKES SHOWS SECTION
 
 function makeShowList(shows) {
-  const show = document.querySelector(".show");
+  const referenceHolder = document.querySelector(".show__holder");
+  // const show = document.querySelector(".show");
   const ShowSchedule = document.createElement("div");
   ShowSchedule.classList.add("show__schedule");
-  show.appendChild(ShowSchedule);
+  referenceHolder.appendChild(ShowSchedule);
 
   const showDateTitle = document.createElement("h4");
   showDateTitle.classList.add("show__schedule-title");
@@ -113,11 +161,11 @@ function makeShowList(shows) {
   ShowSchedule.appendChild(showCity);
 
   const showButton = document.createElement("Button");
+
   showButton.classList.add("show__button");
   ShowSchedule.appendChild(showButton);
-
   showDateTitle.innerText = "DATE";
-  showDate.innerText = shows.date;
+  showDate.innerText = shows.date.toLowerCase();
   showVenue.innerText = "VENUE";
   showVenueName.innerText = shows.venue;
   showLocation.innerText = "LOCATION";

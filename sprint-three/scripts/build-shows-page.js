@@ -1,21 +1,22 @@
 // BIO PAGE AND FORM
 
 const header = { headers: { "content-type": "application/json" } };
-// let commenterID; FIXME:
-const comments = [];
+let commentId = "";
+let comments = [];
 
 const url =
   "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
-const deleteUrl =
-  "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40&id=";
+const deleteUrl = "https://project-1-api.herokuapp.com/comments/";
+const apiKey = "?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
 
 function displayComments() {
   let bio = axios
     .get(url)
     .then((res) => {
+      comments = [];
       res.data
         .sort(function (x, y) {
-          return x.timestamp - y.timestamp;
+          return y.timestamp - x.timestamp;
         })
         .forEach((item) => {
           let currentDate = new Date(item.timestamp);
@@ -31,10 +32,13 @@ function displayComments() {
             name: item.name,
             comment: item.comment,
             date: formattedDate,
+            id: item.id,
           };
+
           comments.push(newComment);
-          loadComments();
         });
+      loadComments();
+      // console.log(comments);
     })
     .catch((err) => {
       console.log(err);
@@ -45,28 +49,7 @@ const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  // FIXME: DONT NEED THIS ANYMORE HAVE IT DOWN
-  // axios
-  //   .post(
-  //     url,
-  //     {
-  //       name: form.name.value,
-  //       comment: form.comment.value,
-  //     },
-  //     header
-  //   )
-  //   .then(function (response) {
-  //     console.log(response.data);
-  //     removeParent();
-  //     makeParentDiv();
-  //   })
-  //   .catch(function (error) {
-  //     console.log(error.response.message);
-  //   });
-  // let formName = (document.querySelector(".comments__name").value = "");
-  // let formComment = (document.querySelector(".comments__comment").value = "");
-
+  console.log(event);
   if (form.name.value === "" && form.comment.value === "") {
     console.log(
       "Please enter your name and a comment so we know you support us."
@@ -109,8 +92,7 @@ form.addEventListener("submit", (event) => {
       )
       .then(function (response) {
         console.log(response.data);
-        removeParent();
-        makeParentDiv();
+        displayComments();
       })
       .catch(function (error) {
         console.log(error.response.message);
@@ -126,14 +108,15 @@ function removeParent() {
   document.querySelector(".comments__return").innerHTML = "";
 }
 
+// add event listener/ delete in the event L
+// if state
+// pickup the id from the comment.
+// displaycomment() in the after the event.
+
 // axios
-//   .delete(
-//     deleteUrl,
-//     {
-//       params: { id: "d1abafa9-82a6-4eb7-907e-2dc12f5e0efb" },
-//     }
-//     // { headers: { "Content-type": "application/json" } }
-//   )
+//   .delete(deleteUrl + commentId + apiKey, {
+//
+//   })
 //   .then(function (response) {
 //     console.log(response.data);
 //   })
@@ -171,7 +154,7 @@ makeParentDiv();
 // TODO: .reverse() removed from forEach
 function loadComments() {
   document.querySelector(".comments__return").innerHTML = "";
-  comments.reverse().forEach((element) => makeSection(element));
+  comments.forEach((element) => makeSection(element));
 }
 
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER

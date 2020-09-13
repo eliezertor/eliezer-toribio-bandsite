@@ -554,7 +554,7 @@ body {
   &__return {
     max-width: 90vw;
     margin: 0 16px 0 16px;
-    display: flex;
+    // display: flex; FIXME: WHY is this coming back like this.
     flex-direction: column;
     flex-flow: wrap;
     align-self: center;
