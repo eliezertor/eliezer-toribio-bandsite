@@ -24,7 +24,7 @@ function displayComments() {
             currentDate.getMonth() +
             1 +
             "/" +
-            currentDate.getDay() +
+            currentDate.getDate() +
             "/" +
             currentDate.getFullYear();
 
@@ -171,10 +171,25 @@ function makeSection(comment) {
   const commenterName = document.createElement("h2");
   commenterName.classList.add("comments__commenter-name");
   separation.appendChild(commenterName);
+
   // MAKES DATE
   const date = document.createElement("span");
   date.classList.add("comments__date");
   separation.appendChild(date);
+
+  const commentLike = document.createElement("img");
+  commentLike.classList.add("comments__like");
+  separation.appendChild(commentLike);
+
+  const commentDelete = document.createElement("img");
+  commentDelete.classList.add("comments__delete");
+  separation.appendChild(commentDelete);
+
+  document.querySelector(".comments__like").src =
+    "../Assets/Icons/SVG/thumb_up-24px.svg";
+  document.querySelector(".comments__delete").src =
+    "../Assets/Icons/SVG/delete-24px.svg";
+
   // MAKES PARAGRAPH
   const commenterPara = document.createElement("p");
   commenterPara.classList.add("comments__commenter-paragraph");

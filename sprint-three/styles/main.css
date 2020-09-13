@@ -188,7 +188,7 @@ body {
     margin: 0;
     width: 10%;
     height: 10%;
-    padding: 0 0 5.1% 0.6%;
+    padding: 0 0 45.5px 11px;
     border-bottom: 5px solid #ffffff;
     font-weight: 600;
   }
@@ -209,9 +209,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .header__nav-list-right {
-    width: 11%;
+    width: 80px;
     height: 40%;
-    padding: 0 0 9% 1%;
+    padding: 0 0 45.5px 15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -230,7 +230,7 @@ body {
     margin: 0 0 0 5%;
     width: 5.5%;
     height: 10%;
-    padding: 0 0 4.5% 0.5%;
+    padding: 0 0 45.5px 15px;
   }
   .header__nav-list-right:hover {
     border-bottom: 5px solid #ffffff;
@@ -929,6 +929,19 @@ body {
     width: 85%;
     margin: 0 0 5% 12%;
   }
+}
+.comments__delete {
+  width: 24px;
+  height: 24px;
+  margin-left: 5%;
+  background-image: url("../Assets/Icons/SVG/delete-24px.svg");
+  fill: red;
+}
+.comments__like {
+  width: 24px;
+  height: 24px;
+  margin-left: 20%;
+  background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
 }
 
 .footer {

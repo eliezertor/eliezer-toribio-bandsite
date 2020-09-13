@@ -111,7 +111,7 @@ body {
       margin: 0;
       width: 10%;
       height: 10%;
-      padding: 0 0 5.1% 0.6%;
+      padding: 0 0 45.5px 11px;
       border-bottom: 5px solid $text-color;
       font-weight: 600;
     }
@@ -125,9 +125,10 @@ body {
       border-bottom: 5px solid $text-color;
     }
     @include tablet {
-      width: 11%;
+      width: 80px;
       height: 40%;
-      padding: 0 0 9% 1%;
+      // padding: 0 0 9% 1%;
+      padding: 0 0 45.5px 15px;
       display: flex;
       align-content: space-around;
       align-items: center;
@@ -138,7 +139,7 @@ body {
       margin: 0 0 0 5%;
       width: 5.5%;
       height: 10%;
-      padding: 0 0 4.5% 0.5%;
+      padding: 0 0 45.5px 15px;
       &:hover {
         border-bottom: 5px solid $text-color;
       }
@@ -635,6 +636,20 @@ body {
       width: 85%;
       margin: 0 0 5% 12%;
     }
+  }
+  &__delete {
+    width: 24px;
+    height: 24px;
+    margin-left: 5%;
+    // fill: red;
+    background-image: url("../Assets/Icons/SVG/delete-24px.svg");
+    fill: red;
+  }
+  &__like {
+    width: 24px;
+    height: 24px;
+    margin-left: 20%;
+    background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
   }
 }
 // START OF FOOTER

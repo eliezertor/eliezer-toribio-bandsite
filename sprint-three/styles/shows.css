@@ -2,16 +2,19 @@
   font-family: "Avenir";
   src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Regular.otf) format(truetype);
 }
+
 @font-face {
   font-family: "Avenir";
   src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Demi.otf) format(truetype);
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Avenir";
   src: url(../../Assets/Fonts/Linotype-AvenirNextLTPro-Bold.otf) format(truetype);
   font-weight: bold;
 }
+
 html,
 body {
   margin: 0;
@@ -30,6 +33,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,6 +52,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav {
     -webkit-box-orient: horizontal;
@@ -56,6 +61,7 @@ body {
             flex-direction: row;
   }
 }
+
 .header__nav-logo-link {
   width: 2rem;
   height: 12vw;
@@ -69,6 +75,7 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav-logo-link {
     width: 20vw;
@@ -84,6 +91,7 @@ body {
     margin: 0 0 0 24px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .header__nav-logo-link {
     margin: 0 4% 0 12.6%;
@@ -91,12 +99,14 @@ body {
     height: 50%;
   }
 }
+
 .header__nav-logo-image {
   width: 35vw;
   height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav-logo-image {
     width: 30vw;
@@ -105,6 +115,7 @@ body {
             box-sizing: border-box;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .header__nav-logo-image {
     width: 16vw;
@@ -113,6 +124,7 @@ body {
             box-sizing: border-box;
   }
 }
+
 .header__nav-options {
   width: 100%;
   height: 30px;
@@ -127,6 +139,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav-options {
     width: 68%;
@@ -140,16 +153,19 @@ body {
     margin: 0;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .header__nav-options {
     width: 75%;
   }
 }
+
 .header__nav-list {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: auto;
 }
+
 .header__nav-list-left {
   width: 50%;
   display: -webkit-box;
@@ -162,14 +178,16 @@ body {
           box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
 .header__nav-list-left:hover {
   border-bottom: 5px solid #ffffff;
   font-weight: 600;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav-list-left {
-    width: 17%;
-    padding: 0 0 9% 1%;
+    max-width: 93px;
+    padding: 0 0 45.5px 11px;
     margin: 0 10% 0 0;
     height: 40%;
     display: -webkit-box;
@@ -181,15 +199,17 @@ body {
     font-size: 0.9rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .header__nav-list-left {
     margin: 0;
     width: 10%;
     height: 10%;
-    padding: 0 0 5.1% 0.6%;
+    padding: 0 0 45.5px 11px;
     font-weight: 600;
   }
 }
+
 .header__nav-list-right {
   width: 50%;
   display: -webkit-box;
@@ -202,9 +222,11 @@ body {
           box-sizing: border-box;
   border-bottom: 5px solid #ffffff;
 }
+
 .header__nav-list-right:hover {
   border-bottom: 5px solid #ffffff;
 }
+
 @media screen and (min-width: 768px) {
   .header__nav-list-right {
     width: 80px;
@@ -223,6 +245,7 @@ body {
             box-sizing: border-box;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .header__nav-list-right {
     margin: 0 0 0 5%;
@@ -231,6 +254,7 @@ body {
     border-bottom: 5px solid #ffffff;
   }
 }
+
 .header__nav-list-links {
   text-decoration: none;
   list-style: none;
@@ -247,6 +271,7 @@ body {
   display: -ms-flexbox;
   display: flex;
 }
+
 .hero__image {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(50, 50, 50, 0.2)), to(rgba(50, 50, 50, 0.2))), url("../Assets/Images/tolga-ahmetler-unsplash.jpg");
   background: linear-gradient(rgba(50, 50, 50, 0.2), rgba(50, 50, 50, 0.2)), url("../Assets/Images/tolga-ahmetler-unsplash.jpg");
@@ -256,30 +281,35 @@ body {
   background-repeat: no-repeat;
   position: relative;
 }
+
 @media screen and (min-width: 768px) {
   .hero__image {
     height: 670px;
     background-size: cover;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .hero__image {
     height: 46.5vw;
     height: 670px;
   }
 }
+
 .hero__album {
   font-size: 1rem;
   color: #ffffff;
   position: absolute;
   margin: 64px 0 0 24px;
 }
+
 @media screen and (min-width: 768px) {
   .hero__album {
     margin: 96px 0 0 24px;
     font-size: 1.6rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .hero__album {
     margin: 160px 0 0 149px;
@@ -287,6 +317,7 @@ body {
     font-weight: 600;
   }
 }
+
 .hero__title {
   position: absolute;
   color: #ffffff;
@@ -296,6 +327,7 @@ body {
   margin: 100px 24px 64px 24px;
   z-index: 1;
 }
+
 @media screen and (min-width: 768px) {
   .hero__title {
     margin: 150px 0 0 24px;
@@ -309,6 +341,7 @@ body {
     letter-spacing: 1px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .hero__title {
     margin: 224px 0 0 149px;
@@ -317,12 +350,14 @@ body {
     font-weight: 900;
   }
 }
+
 .hero__sound {
   position: absolute;
   margin: 320px 16px 0 24px;
   height: 110px;
   max-width: 85%;
 }
+
 @media screen and (min-width: 768px) {
   .hero__sound {
     margin: 430px 16px 0 16px;
@@ -330,6 +365,7 @@ body {
     width: 58%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .hero__sound {
     margin: 270px 0 0 656px;
@@ -348,6 +384,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
 @media screen and (min-width: 768px) {
   .show {
     display: -webkit-box;
@@ -358,6 +395,7 @@ body {
             align-items: flex-end;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show {
     display: -webkit-box;
@@ -368,6 +406,7 @@ body {
     margin: 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   .show__header {
     -ms-flex-item-align: start;
@@ -375,6 +414,7 @@ body {
     width: 90vw;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__header {
     width: 10vw;
@@ -383,10 +423,12 @@ body {
     display: inline-block;
   }
 }
+
 .show__title {
   font-size: 2rem;
   font-weight: 900;
 }
+
 @media screen and (min-width: 768px) {
   .show__title {
     width: 50vw;
@@ -394,6 +436,7 @@ body {
     padding-top: 1em;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__title {
     width: 10vw;
@@ -401,6 +444,7 @@ body {
     margin: 0;
   }
 }
+
 .show__info {
   display: none;
   display: -webkit-box;
@@ -412,6 +456,7 @@ body {
   -ms-flex-line-pack: center;
       align-content: center;
 }
+
 @media screen and (min-width: 768px) {
   .show__info {
     font-weight: 600;
@@ -421,6 +466,7 @@ body {
         align-self: flex-start;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__info {
     width: 68vw;
@@ -430,56 +476,68 @@ body {
     height: 5vw;
   }
 }
-.show__info-date, .show__info-location, .show__info-venue {
+
+.show__info-date, .show__info-venue, .show__info-location {
   display: none;
   color: #afafaf;
 }
+
 @media screen and (min-width: 768px) {
-  .show__info-date, .show__info-location, .show__info-venue {
+  .show__info-date, .show__info-venue, .show__info-location {
     display: unset;
     margin-right: 15vw;
     font-size: 0.9rem;
   }
 }
+
 .show__info-venue {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .show__info-venue {
     display: unset;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__info-venue {
     margin-left: 10%;
   }
 }
+
 .show__info-location {
   display: none;
 }
+
 @media screen and (min-width: 768px) {
   .show__info-location {
     display: unset;
     margin-left: 7vw;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__info-location {
     margin-left: 3%;
   }
 }
+
 .show__info__empty {
   display: none;
 }
+
 .show__schedule {
   border-bottom: 1.5px solid #e1e1e1;
 }
+
 @media screen and (min-width: 768px) {
   .show__schedule {
     height: 11vw;
     margin: 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   .show__schedule {
     display: -webkit-box;
@@ -494,6 +552,7 @@ body {
     width: 100%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule {
     width: 754px;
@@ -504,76 +563,91 @@ body {
     margin: 0;
   }
 }
-.show__schedule-title, .show__schedule-location, .show__schedule-venue {
+
+.show__schedule-title, .show__schedule-venue, .show__schedule-location {
   font-weight: 600;
   color: #afafaf;
   margin: 6% 0 0 0;
 }
+
 @media screen and (min-width: 768px) {
-  .show__schedule-title, .show__schedule-location, .show__schedule-venue {
+  .show__schedule-title, .show__schedule-venue, .show__schedule-location {
     display: none;
   }
 }
+
 @media screen and (min-width: 1200px) {
-  .show__schedule-title, .show__schedule-location, .show__schedule-venue {
+  .show__schedule-title, .show__schedule-venue, .show__schedule-location {
     width: 70%;
   }
 }
+
 .show__schedule-date {
   font-size: 1.1rem;
   font-weight: 600;
   margin: 5% 0;
   text-transform: capitalize;
 }
+
 @media screen and (min-width: 768px) {
   .show__schedule-date {
     width: 105px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule-date {
     width: 90%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule-venue {
     width: 20px;
   }
 }
+
 .show__schedule-venue-name {
   font-size: 1rem;
 }
+
 @media screen and (min-width: 768px) {
   .show__schedule-venue-name {
     width: 165px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule-venue-name {
     width: 70%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule-location {
     width: 70%;
   }
 }
+
 .show__schedule-city {
   font-size: 1rem;
   margin: 5% 0 9% 0;
 }
+
 @media screen and (min-width: 768px) {
   .show__schedule-city {
     width: 120px;
     margin: 0;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__schedule-city {
     width: 70%;
     margin-right: 3%;
   }
 }
+
 .show__button {
   background-color: #323232;
   width: 18rem;
@@ -584,6 +658,7 @@ body {
   font-size: 1rem;
   border: none;
 }
+
 @media screen and (min-width: 768px) {
   .show__button {
     width: 20%;
@@ -593,6 +668,7 @@ body {
     padding: 0 0 0 0;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .show__button {
     width: 70%;
@@ -615,6 +691,7 @@ body {
   font-size: 13px;
   margin-top: 13%;
 }
+
 @media screen and (min-width: 768px) {
   .footer {
     -webkit-box-orient: horizontal;
@@ -630,12 +707,14 @@ body {
     margin-top: 6%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer {
     height: 50vh;
     width: 98.5%;
   }
 }
+
 .footer__touch {
   margin: 40px 0 24px 0;
   font-size: 2rem;
@@ -644,6 +723,7 @@ body {
   width: 90%;
   font-weight: bold;
 }
+
 @media screen and (min-width: 768px) {
   .footer__touch {
     width: 33%;
@@ -654,6 +734,7 @@ body {
     color: #ffffff;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__touch {
     margin: 3.3% 0 0 11%;
@@ -661,6 +742,7 @@ body {
     font-size: 2.4em;
   }
 }
+
 .footer__social {
   width: 50%;
   height: 10%;
@@ -672,6 +754,7 @@ body {
           justify-content: space-evenly;
   margin-left: 2%;
 }
+
 @media screen and (min-width: 768px) {
   .footer__social {
     -webkit-box-align: center;
@@ -682,6 +765,7 @@ body {
     margin: 38px 0 0 0;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__social {
     height: 18%;
@@ -692,11 +776,13 @@ body {
             align-items: flex-end;
   }
 }
+
 .footer__social-link {
   width: 50px;
   height: 50px;
   background-repeat: no-repeat;
 }
+
 @media screen and (min-width: 768px) {
   .footer__social-link {
     width: 20px;
@@ -705,38 +791,47 @@ body {
     color: #ffffff;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__social-link {
     background-size: 95% 95%;
   }
 }
+
 .footer__social-link-insta {
   background-image: url("../Assets/Icons/SVG/Icon-instagram.svg");
 }
+
 .footer__social-link-face {
   background-image: url("../Assets/Icons/SVG/Icon-facebook.svg");
 }
+
 .footer__social-link-twitter {
   background-image: url("../Assets/Icons/SVG/Icon-twitter.svg");
 }
+
 .footer__social-logo {
   width: 20%;
   height: 50px;
 }
+
 @media screen and (min-width: 320px) {
   .footer__social-logo {
     display: none;
   }
 }
+
 @media screen and (min-width: 768px) {
   .footer__social-logo {
     display: contents;
   }
 }
+
 .footer__social-logo-image {
   width: 50px;
   height: 50px;
 }
+
 @media screen and (min-width: 768px) {
   .footer__social-logo-image {
     width: 15%;
@@ -745,6 +840,7 @@ body {
     font-weight: bold;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__social-logo-image {
     width: 8%;
@@ -752,15 +848,17 @@ body {
     margin-left: 37%;
   }
 }
+
 .footer .management__top,
 .footer .management__middle,
 .footer .management__bottom {
   margin: 0 0 10% 0;
 }
+
 @media screen and (min-width: 768px) {
   .footer .management__top,
-.footer .management__middle,
-.footer .management__bottom {
+  .footer .management__middle,
+  .footer .management__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -778,20 +876,23 @@ body {
     margin: 25px 0 0 12px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer .management__top,
-.footer .management__middle,
-.footer .management__bottom {
+  .footer .management__middle,
+  .footer .management__bottom {
     height: 50%;
     width: 17%;
     margin: 1% 0 0 4%;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer .management__top {
     margin-left: 11%;
   }
 }
+
 .footer__management {
   font-weight: 600;
   width: 80%;
@@ -799,6 +900,7 @@ body {
   margin: 0;
   font-size: 14px;
 }
+
 @media screen and (min-width: 768px) {
   .footer__management {
     width: 100%;
@@ -812,11 +914,13 @@ body {
     padding: 0 0 0 0;
   }
 }
+
 .footer__management-company {
   width: 90%;
   margin: 0 0 24px 0;
   padding: 0;
 }
+
 @media screen and (min-width: 768px) {
   .footer__management-company {
     width: 100%;
@@ -826,10 +930,12 @@ body {
     font-size: 0.9rem;
   }
 }
+
 .footer__address {
   width: 50%;
   margin: 0 0 24px 0;
 }
+
 @media screen and (min-width: 768px) {
   .footer__address {
     width: 80%;
@@ -840,12 +946,14 @@ body {
     line-height: 1.4rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__address {
     margin: 1% 0 0 0;
     width: 85%;
   }
 }
+
 .footer__email {
   width: 60%;
   height: auto;
@@ -853,6 +961,7 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+
 @media screen and (min-width: 768px) {
   .footer__email {
     width: 40%;
@@ -862,15 +971,18 @@ body {
     font-size: 0.9rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .footer__email {
     margin: 4% 0 0 0;
   }
 }
+
 .footer__copy-right {
   margin: 0 0 40px 0;
   width: 75%;
 }
+
 @media screen and (min-width: 768px) {
   .footer__copy-right {
     width: 100%;
@@ -879,12 +991,8 @@ body {
     font-size: 0.9rem;
   }
 }
+
 @media screen and (min-width: 1200px) {
-  .footer__copy-right {
-    margin-left: 11%;
-  }
-}
-/*# sourceMappingURL=shows.css.map */creen and (min-width: 1200px) {
   .footer__copy-right {
     margin-left: 11%;
   }
