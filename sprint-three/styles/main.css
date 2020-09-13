@@ -228,7 +228,7 @@ body {
 @media screen and (min-width: 1200px) {
   .header__nav-list-right {
     margin: 0 0 0 5%;
-    width: 5.5%;
+    width: 80px;
     height: 10%;
     padding: 0 0 45.5px 15px;
   }
@@ -934,14 +934,12 @@ body {
   width: 24px;
   height: 24px;
   margin-left: 5%;
-  background-image: url("../Assets/Icons/SVG/delete-24px.svg");
   fill: red;
 }
 .comments__like {
   width: 24px;
   height: 24px;
   margin-left: 20%;
-  background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
 }
 
 .footer {

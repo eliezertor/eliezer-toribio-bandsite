@@ -157,6 +157,12 @@ function loadComments() {
   comments.forEach((element) => makeSection(element));
 }
 
+// let deleteBtn = document.getElementsByClassName("comments__delete");
+
+// deleteBtn.addEventListener("click", (event) => {
+//   console.log(event);
+// });
+
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER
 function makeSection(comment) {
   const referenceParent = document.querySelector(".comments__return");
@@ -177,18 +183,18 @@ function makeSection(comment) {
   date.classList.add("comments__date");
   separation.appendChild(date);
 
-  const commentLike = document.createElement("img");
-  commentLike.classList.add("comments__like");
-  separation.appendChild(commentLike);
+  // const commentLike = document.createElement("img");
+  // commentLike.classList.add("comments__like");
+  // separation.appendChild(commentLike);
 
-  const commentDelete = document.createElement("img");
-  commentDelete.classList.add("comments__delete");
-  separation.appendChild(commentDelete);
+  // const commentDelete = document.createElement("img");
+  // commentDelete.classList.add("comments__delete");
+  // separation.appendChild(commentDelete);
 
-  document.querySelector(".comments__like").src =
-    "../Assets/Icons/SVG/thumb_up-24px.svg";
-  document.querySelector(".comments__delete").src =
-    "../Assets/Icons/SVG/delete-24px.svg";
+  // document.querySelector(".comments__like").src =
+  //   "../Assets/Icons/SVG/thumb_up-24px.svg";
+  // document.querySelector(".comments__delete").src =
+  //   "../Assets/Icons/SVG/delete-24px.svg";
 
   // MAKES PARAGRAPH
   const commenterPara = document.createElement("p");

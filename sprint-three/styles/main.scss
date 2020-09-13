@@ -137,7 +137,7 @@ body {
     }
     @include desktop {
       margin: 0 0 0 5%;
-      width: 5.5%;
+      width: 80px;
       height: 10%;
       padding: 0 0 45.5px 15px;
       &:hover {
@@ -555,7 +555,6 @@ body {
   &__return {
     max-width: 90vw;
     margin: 0 16px 0 16px;
-    // display: flex; FIXME: WHY is this coming back like this.
     flex-direction: column;
     flex-flow: wrap;
     align-self: center;
@@ -642,14 +641,14 @@ body {
     height: 24px;
     margin-left: 5%;
     // fill: red;
-    background-image: url("../Assets/Icons/SVG/delete-24px.svg");
+    // background-image: url("../Assets/Icons/SVG/delete-24px.svg");
     fill: red;
   }
   &__like {
     width: 24px;
     height: 24px;
     margin-left: 20%;
-    background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
+    // background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
   }
 }
 // START OF FOOTER
