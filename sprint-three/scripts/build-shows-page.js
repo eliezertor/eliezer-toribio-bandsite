@@ -1,14 +1,14 @@
 // BIO PAGE AND FORM
 
 const header = { headers: { "content-type": "application/json" } };
-let commentId = "";
 let comments = [];
 
+// GET AND POST URL
 const url =
   "https://project-1-api.herokuapp.com/comments/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
-const deleteUrl = "https://project-1-api.herokuapp.com/comments/";
-const apiKey = "?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
 
+// CONNECTED TO API TO COLLECT DATA AND PUSH INTO LOCAL ARRAY TO UPLOAD COMMENTS
+// MAKES DATE DYNAMIC AND CONVERTS FROM TIMESTAMP TO DATE OF UPLOADED COMMENT AND UPLOADED DATE
 function displayComments() {
   let bio = axios
     .get(url)
@@ -32,19 +32,21 @@ function displayComments() {
             name: item.name,
             comment: item.comment,
             date: formattedDate,
-            id: item.id,
           };
 
           comments.push(newComment);
         });
       loadComments();
-      // console.log(comments);
     })
     .catch((err) => {
       console.log(err);
     });
 }
 
+// EVENT LISTENER FOR POSTING COMMENTS
+// TEXT WILL DISPLAY RED IF NAME AND COMMENT FIELDS ARE NOT FILLED.
+// WILL DISPLAY RED IF ONE OR THE OTHER IS MISSING INFORMATION
+// WILL NOT ALLOW POST BE TO COMPLETED.
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
@@ -91,48 +93,21 @@ form.addEventListener("submit", (event) => {
         header
       )
       .then(function (response) {
+        console.log(response.message);
+        console.log(response.status);
         console.log(response.data);
         displayComments();
       })
       .catch(function (error) {
         console.log(error.response.message);
+        console.log(error.response.data);
+        console.log(error.response.status);
       });
   }
 
   document.querySelector(".comments__name").value = "";
   document.querySelector(".comments__comment").value = "";
-  // removeParent();
 });
-
-function removeParent() {
-  document.querySelector(".comments__return").innerHTML = "";
-}
-
-// add event listener/ delete in the event L
-// if state
-// pickup the id from the comment.
-// displaycomment() in the after the event.
-
-// axios
-//   .delete(deleteUrl + commentId + apiKey, {
-//
-//   })
-//   .then(function (response) {
-//     console.log(response.data);
-//   })
-//   .catch(function (error) {
-//     console.log(error.response);
-//   });
-
-// MAKES DATE DYNAMIC TO DATE OF UPLOADED COMMENT
-let currentDate = new Date();
-let formattedDate =
-  currentDate.getMonth() +
-  1 +
-  "/" +
-  currentDate.getDay() +
-  "/" +
-  currentDate.getFullYear();
 
 // TAKES VALUE FROM FORM WHEN CALLED AND PUSHES INTO COMMENTS ARRAY
 // MAKES PARENT CONTAINER AND LOADS COMMENTS
@@ -151,17 +126,10 @@ function makeParentDiv() {
 makeParentDiv();
 
 // LOOPS OVER COMMENTS ARRAY AND CLEARS COMMENT SECTION
-// TODO: .reverse() removed from forEach
 function loadComments() {
   document.querySelector(".comments__return").innerHTML = "";
   comments.forEach((element) => makeSection(element));
 }
-
-// let deleteBtn = document.getElementsByClassName("comments__delete");
-
-// deleteBtn.addEventListener("click", (event) => {
-//   console.log(event);
-// });
 
 // MAKES CHILD ELEMENTS AND APPENDS TO PARENT CONTAINER
 function makeSection(comment) {
@@ -183,24 +151,12 @@ function makeSection(comment) {
   date.classList.add("comments__date");
   separation.appendChild(date);
 
-  // const commentLike = document.createElement("img");
-  // commentLike.classList.add("comments__like");
-  // separation.appendChild(commentLike);
-
-  // const commentDelete = document.createElement("img");
-  // commentDelete.classList.add("comments__delete");
-  // separation.appendChild(commentDelete);
-
-  // document.querySelector(".comments__like").src =
-  //   "../Assets/Icons/SVG/thumb_up-24px.svg";
-  // document.querySelector(".comments__delete").src =
-  //   "../Assets/Icons/SVG/delete-24px.svg";
-
   // MAKES PARAGRAPH
   const commenterPara = document.createElement("p");
   commenterPara.classList.add("comments__commenter-paragraph");
   separation.appendChild(commenterPara);
 
+  //  DISPLAYS DATA COLLECTED FROM API
   commenterName.innerText = comment.name;
   date.innerText = comment.date;
   commenterPara.innerText = comment.comment;

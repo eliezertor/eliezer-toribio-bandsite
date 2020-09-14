@@ -127,7 +127,6 @@ body {
     @include tablet {
       width: 80px;
       height: 40%;
-      // padding: 0 0 9% 1%;
       padding: 0 0 45.5px 15px;
       display: flex;
       align-content: space-around;
@@ -359,9 +358,7 @@ body {
     background-color: $gallery-color;
     font-size: 1.5rem;
     font-weight: bold;
-    // margin: 10% 40% 4% 0;
     padding: 10% 40% 3% 5%;
-    // width: 55vw;
     @include tablet {
       font-size: 2.4rem;
       padding: 5% 40% 5% 3%;
@@ -394,7 +391,7 @@ body {
   }
 }
 
-// // COMMENTS
+// START OF COMMENTS AND FORM
 
 .comments {
   display: flex;
@@ -413,7 +410,6 @@ body {
   &__title {
     align-content: flex-start;
     font-weight: 900;
-    // width: 57%;
     justify-self: flex-start;
     color: $primary-cta;
     margin-left: 20px;
@@ -433,12 +429,10 @@ body {
     border-radius: 50%;
     align-self: flex-start;
     position: absolute;
-    // background-position: -20% -50%;
     object-position: 20% 50%;
     top: 0;
     left: 0;
     margin: 1.4em 0 0 1%;
-    // clip-path: circle(100%);
     @include tablet {
       margin: 1.4em 0 0 0.9em;
     }
@@ -552,6 +546,8 @@ body {
     }
   }
 
+  // START OF RETURNED COMMENTS
+
   &__return {
     max-width: 90vw;
     margin: 0 16px 0 16px;
@@ -565,7 +561,6 @@ body {
     }
     @include desktop {
       width: 49%;
-      // padding-right: 4%;
     }
   }
   &__separation {
@@ -591,10 +586,11 @@ body {
     display: inline-block;
     @include tablet {
       margin: 3% 0 2% 13%;
-      width: 23%;
+      width: auto;
+      margin-right: 2%;
     }
     @include desktop {
-      margin: 3% 0 2% 12%;
+      margin: 3% 2% 2% 12%;
     }
   }
   &__picture {
@@ -635,20 +631,6 @@ body {
       width: 85%;
       margin: 0 0 5% 12%;
     }
-  }
-  &__delete {
-    width: 24px;
-    height: 24px;
-    margin-left: 5%;
-    // fill: red;
-    // background-image: url("../Assets/Icons/SVG/delete-24px.svg");
-    fill: red;
-  }
-  &__like {
-    width: 24px;
-    height: 24px;
-    margin-left: 20%;
-    // background-image: url("../Assets/Icons/SVG/thumb_up-24px.svg");
   }
 }
 // START OF FOOTER

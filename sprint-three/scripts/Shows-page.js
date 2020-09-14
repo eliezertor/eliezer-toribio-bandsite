@@ -1,17 +1,18 @@
 // SHOWS PAGE
 
+// API URL AND KEY
 const urlShow =
   "https://project-1-api.herokuapp.com/showdates/?api_key=`c726f312-dedb-4aeb-83d4-cabd1a93db40";
 
+// CONNECTED TO API TO COLLECT SHOW DATA
 axios
   .get(urlShow)
   .then((res) => {
     res.data.forEach((item) => {
-      // console.log(res); TODO:
       let showData = {
-        date: JSON.stringify(item.date).replace(/"/g, ""),
-        venue: JSON.stringify(item.place).replace(/"/g, ""),
-        location: JSON.stringify(item.location).replace(/"/g, ""),
+        date: item.date,
+        venue: item.place,
+        location: item.location,
       };
       show.push(showData);
     });
@@ -19,13 +20,12 @@ axios
   })
   .catch((err) => {
     console.log(err);
-    // console.log(showData);
   });
 
+// SHOW ARRAY TO COLLECT SHOW DATA
 const show = [];
 
 // MAKES PARENT CONTAINER FOR
-
 function makeScheduleDiv() {
   const showParent = document.createElement("div");
   showParent.classList.add("show");
@@ -35,27 +35,27 @@ function makeScheduleDiv() {
     referenceHero.nextElementSibling
   );
 }
-
+// INVOKING
 makeScheduleDiv();
 
 // MAKES HEADER THAT HOLDS SHOW TITLE AND DATE, VENUE AND LOCATION
-
 function makeShowHeader() {
   const referenceParent = document.querySelector(".show");
-  const showHeader = document.createElement("div"); // Parent container for title
+  const showHeader = document.createElement("div");
   showHeader.classList.add("show__header");
   referenceParent.appendChild(showHeader);
 
-  const showTitle = document.createElement("h2"); // Title
+  const showTitle = document.createElement("h2");
   showTitle.classList.add("show__title");
   showHeader.appendChild(showTitle);
   showTitle.innerHTML = "Shows";
 
   loadShow();
 }
-
+// INVOKING
 makeShowHeader();
 
+// MAKES CONTAINER THAT CONTAINS ALL SHOW DATA
 function makeShowHolder() {
   const referenceParent = document.querySelector(".show");
   const showHolder = document.createElement("div");
@@ -84,43 +84,14 @@ function makeShowHolder() {
   emptyInfo.classList.add("show__info__empty");
   showInfo.appendChild(emptyInfo);
 
+  // ONLY DISPLAYS AT TABLET AND DESKTOP BREAKPOINTS
   showDate.innerText = "DATES";
   showVenue.innerText = "VENUE";
   showLocation.innerText = "LOCATION";
 }
-makeShowHolder();
 
 // INVOKES MAKES SHOWS HEADER FUNCTION
-
-// function makeShowInfo() {
-//   const referenceHolder = document.querySelector(".show__holder");
-
-//   const showInfo = document.createElement("div");
-//   showInfo.classList.add("show__info");
-//   referenceParent.appendChild(showInfo);
-
-//   const showDate = document.createElement("p");
-//   showDate.classList.add("show__info-date");
-//   showInfo.appendChild(showDate);
-
-//   const showVenue = document.createElement("p");
-//   showVenue.classList.add("show__info-venue");
-//   showInfo.appendChild(showVenue);
-
-//   const showLocation = document.createElement("p");
-//   showLocation.classList.add("show__info-location");
-//   showInfo.appendChild(showLocation);
-
-//   const emptyInfo = document.createElement("p");
-//   emptyInfo.classList.add("show__info__empty");
-//   showInfo.appendChild(emptyInfo);
-
-//   showDate.innerText = "DATES";
-//   showVenue.innerText = "VENUE";
-//   showLocation.innerText = "LOCATION";
-// }
-
-// makeShowInfo();
+makeShowHolder();
 
 //  LOOPS OVER ARRAY TO DISPLAY EVENTS
 function loadShow(element) {
@@ -128,10 +99,8 @@ function loadShow(element) {
 }
 
 // MAKES SHOWS SECTION
-
 function makeShowList(shows) {
   const referenceHolder = document.querySelector(".show__holder");
-  // const show = document.querySelector(".show");
   const ShowSchedule = document.createElement("div");
   ShowSchedule.classList.add("show__schedule");
   referenceHolder.appendChild(ShowSchedule);
@@ -162,6 +131,7 @@ function makeShowList(shows) {
 
   const showButton = document.createElement("Button");
 
+  // DISPLAYS INFORMATION COLLECTED FROM API
   showButton.classList.add("show__button");
   ShowSchedule.appendChild(showButton);
   showDateTitle.innerText = "DATE";
